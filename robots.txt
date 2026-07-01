@@ -2,4 +2,4 @@ User-agent: *
 
 Allow: /
 
-Sitemap: https://www.realheavycleaningboston.com/sitemap.xml
+Sitemap: https://www.lmhomecleaning.com/sitemap.xml
