@@ -2,13 +2,14 @@
    GOOGLE ANALYTICS 4
 ========================================================== */
 
-// Carrega o gtag.js
+// Carrega gtag.js
 
-const gtagScript = document.createElement('script');
+const gtagScript = document.createElement("script");
 
 gtagScript.async = true;
 
-gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-BWKEDJBR5Q';
+gtagScript.src =
+`https://www.googletagmanager.com/gtag/js?id=${CONFIG.ga4}`;
 
 document.head.appendChild(gtagScript);
 
@@ -16,7 +17,7 @@ document.head.appendChild(gtagScript);
 
 window.dataLayer = window.dataLayer || [];
 
-function gtag() {
+function gtag(){
 
     dataLayer.push(arguments);
 
@@ -24,18 +25,26 @@ function gtag() {
 
 // Inicialização
 
-gtag('js', new Date());
+gtag("js", new Date());
 
-// GA4
+// Analytics
 
-gtag('config', 'G-BWKEDJBR5Q');
+gtag("config", CONFIG.ga4);
 
-// Função global para eventos
+// Google Ads (caso exista)
 
-window.trackEvent = function(eventName, params = {}) {
+if(CONFIG.googleAds){
 
-    gtag('event', eventName, params);
+    gtag("config", CONFIG.googleAds);
+
+}
+
+// Eventos globais
+
+window.trackEvent = function(eventName, params = {}){
+
+    gtag("event", eventName, params);
 
 };
 
-console.log('✅ LM Home Cleaning GA4 carregado');
+console.log("✅ Analytics carregado");
