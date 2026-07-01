@@ -1,0 +1,253 @@
+/* ==========================================================
+FOOTER
+========================================================== */
+
+.footer{
+
+    background:#0F172A;
+
+    color:#FFFFFF;
+
+    padding:90px 0 35px;
+
+}
+
+.footer-brand{
+
+    font-size:30px;
+
+    font-weight:800;
+
+    line-height:1.15;
+
+    color:#FFFFFF;
+
+    margin-bottom:22px;
+
+}
+
+.footer-brand span{
+
+    display:block;
+
+    color:#22C55E;
+
+}
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1fr;
+
+    gap:60px;
+
+    margin-bottom:60px;
+
+}
+
+/* COMPANY */
+
+.footer-logo{
+
+    width:190px;
+
+    margin-bottom:24px;
+
+}
+
+.footer-company p{
+
+    max-width:340px;
+
+    color:#CBD5E1;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+}
+
+/* COLUMN */
+
+.footer-column h3{
+
+    font-size:20px;
+
+    margin-bottom:22px;
+
+    color:#FFFFFF;
+
+}
+
+.footer-column ul{
+
+    list-style:none;
+
+}
+
+.footer-column li{
+
+    margin-bottom:14px;
+
+    color:#CBD5E1;
+
+    font-size:16px;
+
+}
+
+.footer-column a{
+
+    transition:.30s;
+
+}
+
+.footer-column a:hover{
+
+    color:#22C55E;
+
+}
+
+/* BOTTOM */
+
+.footer-bottom{
+
+    border-top:1px solid rgba(255,255,255,.10);
+
+    padding-top:28px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:30px;
+
+}
+
+.footer-bottom p{
+
+    color:#94A3B8;
+
+    font-size:15px;
+
+}
+
+.footer-links{
+
+    display:flex;
+
+    gap:25px;
+
+}
+
+.footer-links a{
+
+    color:#CBD5E1;
+
+    font-size:15px;
+
+    transition:.30s;
+
+}
+
+.footer-links a:hover{
+
+    color:#22C55E;
+
+}
+
+/* ==========================================================
+TABLET
+========================================================== */
+
+@media(max-width:991px){
+
+.footer{
+
+    padding:70px 0 30px;
+
+}
+
+.footer-grid{
+
+    grid-template-columns:1fr 1fr;
+
+    gap:45px;
+
+}
+
+.footer-company{
+
+    grid-column:1/-1;
+
+}
+
+.footer-bottom{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+}
+
+/* ==========================================================
+MOBILE
+========================================================== */
+
+@media(max-width:600px){
+
+.footer{
+
+    padding:55px 0 25px;
+
+}
+
+.footer-grid{
+
+    grid-template-columns:1fr;
+
+    gap:35px;
+
+}
+
+.footer-company{
+
+    text-align:center;
+
+}
+
+.footer-logo{
+
+    width:100px;
+
+    height:auto;
+
+    display:block;
+
+    margin:0 auto 20px;
+
+}
+.footer-company p{
+ 
+    margin:auto;
+
+}
+
+.footer-column{
+
+    text-align:center;
+
+}
+
+.footer-links{
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+}

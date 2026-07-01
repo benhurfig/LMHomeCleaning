@@ -1,0 +1,88 @@
+/* ==========================================================
+LEGAL PAGES
+========================================================== */
+
+.legal-page{
+    padding:90px 0 110px;
+    background:#F8FAFC;
+}
+
+.legal-page .container{
+    max-width:900px;
+}
+
+.legal-page h1{
+    font-size:52px;
+    line-height:1.1;
+    font-weight:800;
+    color:#0F172A;
+    margin:22px 0 12px;
+}
+
+.legal-updated{
+    font-size:16px;
+    color:#64748B;
+    margin-bottom:55px;
+}
+
+.legal-content{
+    background:#FFFFFF;
+    border-radius:24px;
+    padding:50px;
+    box-shadow:0 18px 45px rgba(15,23,42,.06);
+}
+
+.legal-content h2{
+    font-size:24px;
+    color:#0F172A;
+    margin:35px 0 12px;
+}
+
+.legal-content h2:first-child{
+    margin-top:0;
+}
+
+.legal-content p{
+    font-size:17px;
+    line-height:1.8;
+    color:#475569;
+    margin-bottom:18px;
+}
+
+.legal-content ul{
+    margin:20px 0 0;
+    padding-left:22px;
+}
+
+.legal-content li{
+    font-size:17px;
+    line-height:1.8;
+    color:#475569;
+    margin-bottom:8px;
+}
+
+@media(max-width:600px){
+
+    .legal-page{
+        padding:60px 0 80px;
+    }
+
+    .legal-page h1{
+        font-size:34px;
+    }
+
+    .legal-content{
+        padding:28px;
+        border-radius:18px;
+    }
+
+    .legal-content h2{
+        font-size:21px;
+    }
+
+    .legal-content p,
+    .legal-content li{
+        font-size:16px;
+    }
+
+}

@@ -1,0 +1,249 @@
+/* ==========================================================
+   HERO
+========================================================== */
+
+.hero{
+    background:#ffffff;
+    padding:90px 0;
+}
+
+.hero-container{
+    width:min(100% - 40px,1280px);
+    margin:0 auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-areas:
+        "top image"
+        "bottom image";
+
+    gap:34px 70px;
+    align-items:center;
+}
+
+.hero-top{
+    grid-area:top;
+}
+
+.hero-bottom{
+    grid-area:bottom;
+}
+
+.hero-image{
+    grid-area:image;
+
+    width:100%;
+    min-height:560px;
+    border-radius:24px;
+
+    background-image:url("../images/hero-image.png");
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+}
+
+.hero-badge{
+    display:inline-flex;
+    align-items:center;
+
+    padding:8px 18px;
+    background:#ECFDF5;
+    color:#16A34A;
+
+    border-radius:999px;
+
+    font-size:14px;
+    font-weight:600;
+
+    margin-bottom:24px;
+}
+
+.hero h1{
+    font-size:60px;
+    font-weight:800;
+    line-height:1.05;
+    color:#0F172A;
+    margin-bottom:0;
+}
+
+.hero-title-green{
+    font-size:60px;
+    font-weight:800;
+    line-height:1.05;
+    color:#16A34A;
+    margin:0;
+}
+
+.hero p{
+    max-width:560px;
+    font-size:20px;
+    line-height:1.7;
+    color:#64748B;
+    margin-bottom:34px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:18px;
+    margin-bottom:22px;
+}
+
+.btn-primary,
+.btn-secondary{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    height:58px;
+    padding:0 34px;
+
+    border-radius:12px;
+
+    font-weight:700;
+    transition:.30s;
+}
+
+.btn-primary{
+    background:#16A34A;
+    color:#fff;
+}
+
+.btn-primary:hover{
+    background:#15803D;
+}
+
+.btn-secondary{
+    border:2px solid #D1D5DB;
+    color:#0F172A;
+}
+
+.btn-secondary:hover{
+    border-color:#16A34A;
+}
+
+.hero-info{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+
+    color:#64748B;
+    font-size:15px;
+}
+
+/* ==========================================================
+   TABLET / MOBILE
+========================================================== */
+
+@media(max-width:991px){
+
+    .hero{
+        padding:50px 0;
+    }
+
+    .hero-container{
+        grid-template-columns:1fr;
+        grid-template-areas:
+            "top"
+            "image"
+            "bottom";
+
+        gap:28px;
+        text-align:center;
+    }
+
+    .hero-top,
+    .hero-bottom{
+        width:100%;
+    }
+
+    .hero-badge{
+        margin:0 auto 18px;
+        font-size:13px;
+        padding:8px 16px;
+    }
+
+    .hero h1{
+        font-size:36px;
+        line-height:1.08;
+        margin-bottom:8px;
+    }
+
+    .hero-title-green{
+        font-size:36px;
+        line-height:1.08;
+    }
+
+    .hero-image{
+        min-height:260px;
+        border-radius:24px;
+        background-size:cover;
+        background-position:center;
+    }
+
+    .hero p{
+        max-width:520px;
+        margin:0 auto 30px;
+        font-size:18px;
+        line-height:1.6;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+        gap:16px;
+    }
+
+    .btn-primary,
+    .btn-secondary{
+        width:100%;
+        max-width:360px;
+    }
+
+    .hero-info{
+        flex-direction:column;
+        gap:8px;
+        align-items:center;
+    }
+}
+
+@media(max-width:600px){
+
+    .hero{
+        padding:35px 0;
+    }
+
+    .hero-container{
+        width:min(100% - 32px,1280px);
+        gap:24px;
+    }
+
+    .hero-image{
+        min-height:220px;
+        border-radius:22px;
+    }
+
+    .hero-badge{
+        font-size:12px;
+        padding:8px 14px;
+    }
+
+    .hero h1{
+        font-size:28px;
+        line-height:1.10;
+    }
+
+    .hero-title-green{
+        font-size:28px;
+        line-height:1.10;
+    }
+
+    .hero p{
+        font-size:16px;
+        max-width:320px;
+        margin-bottom:28px;
+    }
+
+    .hero-info{
+        font-size:14px;
+    }
+}

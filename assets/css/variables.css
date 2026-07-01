@@ -1,0 +1,29 @@
+:root{
+
+/* Brand */
+
+--primary:#16A34A;
+--primary-dark:#15803D;
+
+--secondary:#0F172A;
+
+--white:#FFFFFF;
+
+--light:#F8FAFC;
+
+--border:#E5E7EB;
+
+--text:#1F2937;
+
+--text-light:#6B7280;
+
+
+/* Layout */
+
+--container:1280px;
+
+--radius:12px;
+
+--transition:.25s ease;
+
+}

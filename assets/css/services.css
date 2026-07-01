@@ -1,0 +1,269 @@
+/* ==========================================================
+   SERVICES
+========================================================== */
+
+.services{
+
+    padding:100px 0;
+
+    background:#FFFFFF;
+
+}
+
+.services .container{
+
+    max-width:1200px;
+
+}
+
+.services h2{
+
+    font-size:48px;
+
+    line-height:1.1;
+
+    font-weight:800;
+
+    color:#0F172A;
+
+    margin:20px 0;
+
+}
+
+.section-description{
+
+    max-width:700px;
+
+    font-size:20px;
+
+    line-height:1.7;
+
+    color:#64748B;
+
+    margin-bottom:70px;
+
+}
+
+/* ==========================================================
+   SERVICE ROW
+========================================================== */
+
+.service-row{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+    margin-bottom:100px;
+
+}
+
+.service-row.reverse .service-image{
+
+    order:2;
+
+}
+
+.service-row.reverse .service-content{
+
+    order:1;
+
+}
+
+/* ==========================================================
+   IMAGE
+========================================================== */
+
+.service-image img{
+
+    width:100%;
+
+    border-radius:24px;
+
+    display:block;
+
+    object-fit:cover;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.service-content span{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    background:#16A34A;
+
+    color:#fff;
+
+    font-weight:700;
+
+    margin-bottom:22px;
+
+}
+
+.service-content h3{
+
+    font-size:34px;
+
+    color:#0F172A;
+
+    margin-bottom:20px;
+
+}
+
+.service-content p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#64748B;
+
+    margin-bottom:24px;
+
+}
+
+.service-content ul{
+
+    list-style:none;
+
+}
+
+.service-content li{
+
+    margin-bottom:12px;
+
+    color:#334155;
+
+    font-size:17px;
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:991px){
+
+.services{
+
+    padding:70px 0;
+
+}
+
+.services h2{
+
+    font-size:38px;
+
+    text-align:center;
+
+}
+
+.section-description{
+
+    text-align:center;
+
+    font-size:18px;
+
+    margin:0 auto 50px;
+
+}
+
+.service-row{
+
+    grid-template-columns:1fr;
+
+    gap:35px;
+
+    margin-bottom:70px;
+
+}
+
+.service-row.reverse .service-image,
+
+.service-row.reverse .service-content{
+
+    order:unset;
+
+}
+
+.service-content{
+
+    text-align:center;
+
+}
+
+.service-content span{
+
+    margin:0 auto 22px;
+
+}
+
+.service-content ul{
+
+    display:inline-block;
+
+    text-align:left;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.services{
+
+    padding:50px 0;
+
+}
+
+.services h2{
+
+    font-size:30px;
+
+}
+
+.section-description{
+
+    font-size:16px;
+
+}
+
+.service-content h3{
+
+    font-size:26px;
+
+}
+
+.service-content p{
+
+    font-size:16px;
+
+}
+
+.service-content li{
+
+    font-size:15px;
+
+}
+
+}
