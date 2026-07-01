@@ -20,7 +20,7 @@
 
     line-height:1.1;
 
-    color:#0F172A;
+    color:#2B2B2B;
 
     margin:20px 0;
 
@@ -30,7 +30,7 @@
 
     display:block;
 
-    color:#16A34A;
+    color:#C62828;
 
 }
 
@@ -46,7 +46,7 @@
 
     line-height:1.7;
 
-    color:#64748B;
+    color:#5F6368;
 
 }
 
@@ -78,7 +78,7 @@
 
     border-radius:28px;
 
-    box-shadow:0 25px 60px rgba(15,23,42,.08);
+    box-shadow:0 25px 60px rgba(0,0,0,.08);
 
 }
 
@@ -130,7 +130,9 @@
 
     padding:28px 0;
 
-    border-bottom:1px solid #E5E7EB;
+    border-bottom:1px solid #EAEAEA;
+
+    transition:.30s ease;
 
 }
 
@@ -140,7 +142,6 @@
 
 }
 
-
 .why-icon{
 
     width:52px;
@@ -149,9 +150,9 @@
 
     border-radius:50%;
 
-    background:#ECFDF5;
+    background:#FFF5F5;
 
-    color:#16A34A;
+    color:#C62828;
 
     display:flex;
 
@@ -165,8 +166,9 @@
 
     flex-shrink:0;
 
-}
+    transition:.30s;
 
+}
 
 .why-item h3{
 
@@ -174,7 +176,7 @@
 
     font-weight:700;
 
-    color:#0F172A;
+    color:#2B2B2B;
 
     margin-bottom:8px;
 
@@ -186,7 +188,7 @@
 
     line-height:1.7;
 
-    color:#64748B;
+    color:#5F6368;
 
 }
 
@@ -194,12 +196,6 @@
 /* ==========================================================
    HOVER
 ========================================================== */
-
-.why-item{
-
-    transition:.30s ease;
-
-}
 
 .why-item:hover{
 
@@ -209,7 +205,7 @@
 
 .why-item:hover .why-icon{
 
-    background:#16A34A;
+    background:#C62828;
 
     color:#FFFFFF;
 

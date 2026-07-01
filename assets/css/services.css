@@ -24,9 +24,15 @@
 
     font-weight:800;
 
-    color:#0F172A;
+    color:#2B2B2B;
 
     margin:20px 0;
+
+}
+
+.services h2 span{
+
+    color:#C62828;
 
 }
 
@@ -38,7 +44,7 @@
 
     line-height:1.7;
 
-    color:#64748B;
+    color:#5F6368;
 
     margin-bottom:70px;
 
@@ -110,9 +116,9 @@
 
     border-radius:50%;
 
-    background:#16A34A;
+    background:#C62828;
 
-    color:#fff;
+    color:#FFFFFF;
 
     font-weight:700;
 
@@ -124,7 +130,7 @@
 
     font-size:34px;
 
-    color:#0F172A;
+    color:#2B2B2B;
 
     margin-bottom:20px;
 
@@ -136,7 +142,7 @@
 
     line-height:1.8;
 
-    color:#64748B;
+    color:#5F6368;
 
     margin-bottom:24px;
 
@@ -152,9 +158,37 @@
 
     margin-bottom:12px;
 
-    color:#334155;
+    color:#2B2B2B;
 
     font-size:17px;
+
+}
+
+.service-content li::before{
+
+    content:"✓ ";
+
+    color:#16A34A;
+
+    font-weight:700;
+
+}
+
+/* ==========================================================
+   BUTTON
+========================================================== */
+
+.services .btn-primary{
+
+    background:#C62828;
+
+    color:#FFFFFF;
+
+}
+
+.services .btn-primary:hover{
+
+    background:#B71C1C;
 
 }
 

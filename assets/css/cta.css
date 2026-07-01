@@ -36,7 +36,7 @@ FINAL CTA
 
     display:block;
 
-    color:#16A34A;
+    color:#C62828;
 
 }
 
@@ -68,7 +68,7 @@ FINAL CTA
 
     padding:22px 48px;
 
-    background:#16A34A;
+    background:#C62828;
 
     color:#FFFFFF;
 
@@ -80,19 +80,18 @@ FINAL CTA
 
     transition:.35s;
 
-    box-shadow:
-    0 20px 40px rgba(22,163,74,.25);
+box-shadow: 0 28px 55px rgba(198,40,40,.25);
 
 }
 
 .cta-button:hover{
 
-    background:#15803D;
+    background:#B71C1C;
 
     transform:translateY(-4px);
 
-    box-shadow:
-    0 28px 55px rgba(22,163,74,.30);
+    
+    box-shadow: 0 28px 55px rgba(198,40,40,.25);
 
 }
 

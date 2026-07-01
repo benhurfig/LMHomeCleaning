@@ -7,7 +7,7 @@ header{
     top:0;
     z-index:1000;
     background:#fff;
-    border-bottom:1px solid var(--border);
+    border-bottom:1px solid #EAEAEA;
 }
 
 header .container{
@@ -19,9 +19,7 @@ header .container{
     position:relative;
 }
 
-/* ==========================================================
-LOGO
-========================================================== */
+/* LOGO */
 
 .logo{
     display:flex;
@@ -40,19 +38,17 @@ LOGO
     font-size:22px;
     line-height:1.1;
     font-weight:700;
-    color:#0F172A;
+    color:#2B2B2B;
 }
 
 .logo span{
     display:block;
     margin-top:4px;
     font-size:14px;
-    color:#64748B;
+    color:#5F6368;
 }
 
-/* ==========================================================
-NAVIGATION
-========================================================== */
+/* NAVIGATION */
 
 .mobile-nav{
     display:flex;
@@ -63,67 +59,42 @@ NAVIGATION
 .mobile-nav a{
     font-size:16px;
     font-weight:600;
-    color:#334155;
+    color:#2B2B2B;
     text-decoration:none;
     transition:.3s;
 }
 
 .mobile-nav a:hover{
-    color:#16A34A;
+    color:#C62828;
 }
 
-/* ==========================================================
-CTA
-========================================================== */
+/* CTA */
 
 .cta{
-
     display:flex;
     align-items:center;
     justify-content:center;
-
     height:52px;
     padding:0 28px;
-
-    background:#16A34A;
-
+    background:#C62828;
     color:#fff;
-
     border-radius:12px;
-
     font-weight:700;
-
     text-decoration:none;
-
     transition:.3s;
-
 }
 
 .cta:hover{
-
-    background:#15803D;
-
+    background:#B71C1C;
 }
 
-/* ==========================================================
-HAMBURGER
-========================================================== */
+/* HAMBURGER */
 
 .hamburger{
-
     display:none;
-
-    font-size:34px;
-
-    cursor:pointer;
-
-    user-select:none;
-
 }
 
-/* ==========================================================
-MOBILE
-========================================================== */
+/* MOBILE */
 
 @media(max-width:900px){
 
@@ -132,7 +103,11 @@ MOBILE
     }
 
     .logo{
-        gap:0;
+        gap:10px;
+    }
+
+    .logo img{
+        width:44px;
     }
 
     .logo h2{
@@ -144,13 +119,9 @@ MOBILE
         font-size:10px;
     }
 
-    /* Esconde menu no celular */
-
     .mobile-nav{
         display:none !important;
     }
-
-    /* Esconde hamburger */
 
     .hamburger{
         display:none !important;
@@ -165,6 +136,10 @@ MOBILE
 }
 
 @media(max-width:600px){
+
+    .logo img{
+        width:38px;
+    }
 
     .logo h2{
         font-size:11px;
