@@ -19,7 +19,7 @@ const CONFIG = {
 
     state:"MA",
 
-    ga4:"G-BWKEDJBR5Q",
+    ga4:"G-VGS11ZW6WD",
 
     googleAds:""
 
