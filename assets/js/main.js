@@ -1,34 +1,45 @@
+
+
 document.addEventListener("DOMContentLoaded", () => {
+
+    // ==========================================================
+    // MOBILE MENU
+    // ==========================================================
 
     const mobileMenuButton = document.querySelector(".mobile-menu-button");
     const mobileNav = document.querySelector(".mobile-nav");
 
-    console.log("Botão:", mobileMenuButton);
-    console.log("Menu:", mobileNav);
+    if (mobileMenuButton && mobileNav) {
 
-    if (!mobileMenuButton || !mobileNav) return;
+        mobileMenuButton.addEventListener("click", () => {
 
-    mobileMenuButton.addEventListener("click", () => {
+            mobileNav.classList.toggle("active");
 
-        console.log("Clique!");
+        });
 
-        mobileNav.classList.toggle("active");
+    }
 
-    });
+    // ==========================================================
+    // GA4 EVENTS
+    // ==========================================================
 
-});
+    document.querySelectorAll("[data-track]").forEach(button => {
 
+        button.addEventListener("click", () => {
 
-// HEADER CTA
-/* ==========================================================
-GA4 EVENTS
-========================================================== */
+            trackEvent(
 
-document.querySelectorAll('[data-track]').forEach(button => {
+                button.dataset.track,
 
-    button.addEventListener('click', function () {
+                {
 
-        trackEvent(button.dataset.location);
+                    location: button.dataset.location || ""
+
+                }
+
+            );
+
+        });
 
     });
 
