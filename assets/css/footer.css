@@ -251,3 +251,55 @@ MOBILE
 }
 
 }
+
+/* ==========================================================
+   FOOTER SOCIAL
+========================================================== */
+
+.footer-social{
+
+    display:flex;
+
+    gap:14px;
+
+    margin-top:22px;
+
+}
+
+.footer-social a{
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    border:1px solid #EAEAEA;
+
+    color:#C62828;
+
+    background:#FFFFFF;
+
+    font-size:18px;
+
+    transition:.30s;
+
+}
+
+.footer-social a:hover{
+
+    background:#C62828;
+
+    color:#FFFFFF;
+
+    border-color:#C62828;
+
+    transform:translateY(-2px);
+
+}
