@@ -294,6 +294,10 @@ MOBILE
 
 .footer-social a:hover{
 
+     align-items:center;
+
+    justify-content:center;
+
     background:#C62828;
 
     color:#FFFFFF;
