@@ -199,6 +199,10 @@ MOBILE
 
 @media(max-width:600px){
 
+    .footer-social{
+    justify-content:center;
+}
+
 .footer{
 
     padding:55px 0 25px;
@@ -294,9 +298,7 @@ MOBILE
 
 .footer-social a:hover{
 
-     align-items:center;
-
-    justify-content:center;
+  
 
     background:#C62828;
 
