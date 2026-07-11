@@ -39,11 +39,26 @@ if(CONFIG.googleAds){
 
 }
 
-// Eventos globais
+/* ==========================================================
+   IDENTIFICA A PÁGINA
+========================================================== */
+
+window.pageSource =
+    window.location.pathname === "/" ||
+    window.location.pathname === "/index.html"
+        ? "home"
+        : window.location.pathname.replace(/\//g, "");
+
+/* ==========================================================
+   EVENTOS
+========================================================== */
 
 window.trackEvent = function(eventName, params = {}){
 
-    gtag("event", eventName, params);
+    gtag("event", eventName, {
+        source_page: window.pageSource,
+        ...params
+    });
 
 };
 
