@@ -219,12 +219,23 @@ HEADER
 
     <div class="container">
 
-        <!-- Logo -->
+        <!-- Logo / Mobile Menu Trigger -->
 
-        <a href="/" class="logo">
+        <a href="/"
+           class="logo"
+           id="logoMenuToggle"
+           aria-label="LM Home Cleaning menu"
+           aria-expanded="false"
+           aria-controls="mobileMenu">
 
-            <img src="assets/images/logo.png"
-                 alt="LM Home Cleaning">
+            <div class="logo-image">
+
+                <img src="assets/images/logo.png"
+                     alt="LM Home Cleaning">
+
+                <span class="logo-menu-icon">⌄</span>
+
+            </div>
 
             <div>
 
@@ -236,13 +247,21 @@ HEADER
 
         </a>
 
-        <!-- Navigation -->
+        <!-- Desktop Navigation -->
 
-        <nav class="mobile-nav">
+        <nav class="desktop-nav">
 
             <a href="#services">Services</a>
 
-            <a href="#estimate">Real Estimate</a>
+            <a href="#estimate">Estimate</a>
+
+            <a href="https://www.smartimateapp.com/smart-booking/?company=lm-booking"
+               data-track="booking_click"
+               data-location="header_navigation">
+
+                Book Online
+
+            </a>
 
             <a href="#reviews">Reviews</a>
 
@@ -250,25 +269,81 @@ HEADER
 
         </nav>
 
-        <!-- CTA -->
+        <!-- Main CTA -->
 
-        <a class="cta"
-           href="https://www.smartimateapp.com/lm-estimate"
-           data-track="estimate_click"
-           data-location="header_cta">
+        <div class="header-choice">
 
-            Get My Estimate
+            <button type="button"
+                    class="cta"
+                    id="headerChoiceToggle"
+                    aria-expanded="false"
+                    aria-controls="headerChoiceMenu">
+
+                Get Started
+
+                <span class="cta-arrow">⌄</span>
+
+            </button>
+
+            <div class="header-choice-menu"
+                 id="headerChoiceMenu">
+
+                <a href="https://www.smartimateapp.com/lm-estimate"
+                   data-track="estimate_click"
+                   data-location="header_choice">
+
+                    <strong>Get My Estimate</strong>
+
+                    <span>See your cleaning price online.</span>
+
+                </a>
+
+                <a href="https://www.smartimateapp.com/smart-booking/?company=lm-booking"
+                   data-track="booking_click"
+                   data-location="header_choice">
+
+                    <strong>Book Online</strong>
+
+                    <span>Choose your service, date and time.</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Mobile Navigation -->
+
+    <nav class="mobile-menu"
+         id="mobileMenu">
+
+        <a href="/">Home</a>
+
+        <a href="#services">Services</a>
+
+        <a href="#estimate">Estimate</a>
+
+        <a href="https://www.smartimateapp.com/smart-booking/?company=lm-booking"
+           data-track="booking_click"
+           data-location="mobile_navigation">
+
+            Book Online
 
         </a>
 
-    </div>
+        <a href="#reviews">Reviews</a>
+
+        <a href="#service-area">Service Area</a>
+
+    </nav>
 
 </header>
 
 <!-- ==========================================================
 END HEADER
 ========================================================== -->
-
 <!-- ==========================================================
 Hero
 ========================================================== -->
