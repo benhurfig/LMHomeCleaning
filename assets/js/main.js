@@ -121,14 +121,18 @@ window.addEventListener("resize", function() {
         );
 
     }
-
 /* ==========================================================
 HERO SLIDER
 ========================================================== */
 
-const heroSlider = document.querySelector(".hero-slider");
+document.addEventListener("DOMContentLoaded", function () {
 
-if (heroSlider) {
+    const heroSlider = document.querySelector(".hero-slider");
+
+    if (!heroSlider) {
+        console.warn("Hero slider não encontrado.");
+        return;
+    }
 
     const heroSlides =
         heroSlider.querySelectorAll(".hero-slide");
@@ -142,204 +146,114 @@ if (heroSlider) {
     const heroNext =
         heroSlider.querySelector(".hero-slider-next");
 
-    let heroCurrentSlide = 0;
+    if (heroSlides.length === 0) {
+        console.warn("Nenhum slide encontrado.");
+        return;
+    }
 
-    let heroAutoPlay;
+    let currentSlide = 0;
+    let autoplayInterval = null;
 
-    let heroTouchStartX = 0;
+    const slideTime = 4000;
 
-    let heroTouchEndX = 0;
-
-    const HERO_SLIDE_TIME = 5000;
-
-    function showHeroSlide(index) {
-
-        if (index < 0) {
-            index = heroSlides.length - 1;
-        }
+    function showSlide(index) {
 
         if (index >= heroSlides.length) {
             index = 0;
         }
 
-        heroSlides.forEach(function(slide) {
+        if (index < 0) {
+            index = heroSlides.length - 1;
+        }
 
+        heroSlides.forEach(function (slide) {
             slide.classList.remove("active");
-
         });
 
-        heroDots.forEach(function(dot) {
-
+        heroDots.forEach(function (dot) {
             dot.classList.remove("active");
-
             dot.removeAttribute("aria-current");
-
         });
 
         heroSlides[index].classList.add("active");
 
-        heroDots[index].classList.add("active");
+        if (heroDots[index]) {
+            heroDots[index].classList.add("active");
+            heroDots[index].setAttribute("aria-current", "true");
+        }
 
-        heroDots[index].setAttribute(
-            "aria-current",
-            "true"
-        );
+        currentSlide = index;
 
-        heroCurrentSlide = index;
-
+        console.log("Slide atual:", currentSlide + 1);
     }
 
-    function nextHeroSlide() {
-
-        showHeroSlide(heroCurrentSlide + 1);
-
+    function nextSlide() {
+        showSlide(currentSlide + 1);
     }
 
-    function previousHeroSlide() {
-
-        showHeroSlide(heroCurrentSlide - 1);
-
+    function previousSlide() {
+        showSlide(currentSlide - 1);
     }
 
-    function startHeroAutoPlay() {
+    function stopAutoplay() {
 
-        stopHeroAutoPlay();
-
-        heroAutoPlay = setInterval(
-            nextHeroSlide,
-            HERO_SLIDE_TIME
-        );
-
-    }
-
-    function stopHeroAutoPlay() {
-
-        if (heroAutoPlay) {
-
-            clearInterval(heroAutoPlay);
-
+        if (autoplayInterval) {
+            clearInterval(autoplayInterval);
+            autoplayInterval = null;
         }
 
     }
 
-    heroNext?.addEventListener("click", function() {
+    function startAutoplay() {
 
-        nextHeroSlide();
+        stopAutoplay();
 
-        startHeroAutoPlay();
+        autoplayInterval = setInterval(function () {
+            nextSlide();
+        }, slideTime);
+
+    }
+
+    heroNext?.addEventListener("click", function () {
+
+        nextSlide();
+        startAutoplay();
 
     });
 
-    heroPrev?.addEventListener("click", function() {
+    heroPrev?.addEventListener("click", function () {
 
-        previousHeroSlide();
-
-        startHeroAutoPlay();
+        previousSlide();
+        startAutoplay();
 
     });
 
-    heroDots.forEach(function(dot, index) {
+    heroDots.forEach(function (dot, index) {
 
-        dot.addEventListener("click", function() {
+        dot.addEventListener("click", function () {
 
-            showHeroSlide(index);
-
-            startHeroAutoPlay();
+            showSlide(index);
+            startAutoplay();
 
         });
 
     });
 
-    /* Pausa ao colocar o mouse */
+    heroSlider.addEventListener("mouseenter", stopAutoplay);
 
-    heroSlider.addEventListener("mouseenter", function() {
+    heroSlider.addEventListener("mouseleave", startAutoplay);
 
-        stopHeroAutoPlay();
+    showSlide(0);
 
-    });
+    startAutoplay();
 
-    heroSlider.addEventListener("mouseleave", function() {
-
-        startHeroAutoPlay();
-
-    });
-
-    /* Swipe no celular */
-
-    heroSlider.addEventListener(
-        "touchstart",
-        function(event) {
-
-            heroTouchStartX =
-                event.changedTouches[0].screenX;
-
-        },
-        {
-            passive:true
-        }
+    console.log(
+        "✅ Hero slider carregado:",
+        heroSlides.length,
+        "imagens"
     );
 
-    heroSlider.addEventListener(
-        "touchend",
-        function(event) {
-
-            heroTouchEndX =
-                event.changedTouches[0].screenX;
-
-            const difference =
-                heroTouchStartX - heroTouchEndX;
-
-            if (Math.abs(difference) < 50) {
-                return;
-            }
-
-            if (difference > 0) {
-
-                nextHeroSlide();
-
-            } else {
-
-                previousHeroSlide();
-
-            }
-
-            startHeroAutoPlay();
-
-        },
-        {
-            passive:true
-        }
-    );
-
-    /* Teclado */
-
-    heroSlider.addEventListener(
-        "keydown",
-        function(event) {
-
-            if (event.key === "ArrowRight") {
-
-                nextHeroSlide();
-
-                startHeroAutoPlay();
-
-            }
-
-            if (event.key === "ArrowLeft") {
-
-                previousHeroSlide();
-
-                startHeroAutoPlay();
-
-            }
-
-        }
-    );
-
-    startHeroAutoPlay();
-
-}
-
+});
     // ==========================================================
     // GA4 EVENTS
     // ==========================================================
