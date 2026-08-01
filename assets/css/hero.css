@@ -19,7 +19,7 @@ HERO TOP
 ========================================================== */
 
 .hero-top{
-    max-width:900px;
+    max-width:950px;
 
     margin:0 auto 42px;
 
@@ -32,7 +32,6 @@ HERO TOP
     justify-content:center;
 
     margin-bottom:22px;
-
     padding:10px 18px;
 
     border:1px solid rgba(198,40,40,.14);
@@ -69,28 +68,197 @@ HERO TOP
 }
 
 /* ==========================================================
-HERO IMAGE
+HERO SLIDER
 ========================================================== */
 
-.hero-image{
+.hero-slider{
+    position:relative;
+
     width:100%;
-    min-height:470px;
+    height:470px;
 
-    /*
-    IMPORTANTE:
-    mantenha abaixo o mesmo caminho da imagem usado
-    no seu hero.css atual.
-    */
-
-    background-image:url("../images/hero.jpg");
-
-    background-position:center;
-    background-repeat:no-repeat;
-    background-size:cover;
+    overflow:hidden;
 
     border-radius:24px;
 
-    box-shadow:0 22px 55px rgba(15,23,42,.12);
+    background:#F3F4F6;
+
+    box-shadow:0 22px 55px rgba(15,23,42,.14);
+
+    isolation:isolate;
+}
+
+.hero-slides{
+    position:relative;
+
+    width:100%;
+    height:100%;
+}
+
+.hero-slide{
+    position:absolute;
+
+    inset:0;
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:scale(1.025);
+
+    transition:
+        opacity .75s ease,
+        visibility .75s ease,
+        transform 5s ease;
+}
+
+.hero-slide.active{
+    opacity:1;
+    visibility:visible;
+
+    transform:scale(1);
+}
+
+.hero-slide img{
+    display:block;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+    object-position:center;
+}
+
+/* Sombra suave para melhorar o visual */
+
+.hero-slider::after{
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:1;
+
+    pointer-events:none;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(15,23,42,.02) 55%,
+            rgba(15,23,42,.18) 100%
+        );
+}
+
+/* ==========================================================
+SLIDER ARROWS
+========================================================== */
+
+.hero-slider-arrow{
+    position:absolute;
+
+    top:50%;
+
+    z-index:3;
+
+    width:48px;
+    height:48px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:0;
+
+    border:1px solid rgba(255,255,255,.60);
+    border-radius:50%;
+
+    background:rgba(255,255,255,.90);
+    color:#2B2B2B;
+
+    font-family:inherit;
+    font-size:35px;
+    line-height:1;
+
+    cursor:pointer;
+
+    box-shadow:0 8px 24px rgba(15,23,42,.16);
+
+    transform:translateY(-50%);
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        transform .25s ease;
+}
+
+.hero-slider-arrow:hover{
+    background:#C62828;
+    color:#FFFFFF;
+
+    transform:translateY(-50%) scale(1.05);
+}
+
+.hero-slider-prev{
+    left:20px;
+}
+
+.hero-slider-next{
+    right:20px;
+}
+
+/* ==========================================================
+SLIDER DOTS
+========================================================== */
+
+.hero-slider-dots{
+    position:absolute;
+
+    left:50%;
+    bottom:20px;
+
+    z-index:3;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:9px;
+
+    padding:8px 11px;
+
+    border-radius:999px;
+
+    background:rgba(15,23,42,.28);
+    backdrop-filter:blur(6px);
+
+    transform:translateX(-50%);
+}
+
+.hero-slider-dot{
+    width:9px;
+    height:9px;
+
+    padding:0;
+
+    border:0;
+    border-radius:50%;
+
+    background:rgba(255,255,255,.65);
+
+    cursor:pointer;
+
+    transition:
+        width .25s ease,
+        border-radius .25s ease,
+        background .25s ease;
+}
+
+.hero-slider-dot.active{
+    width:25px;
+
+    border-radius:999px;
+
+    background:#FFFFFF;
 }
 
 /* ==========================================================
@@ -155,8 +323,6 @@ HERO BUTTONS
         box-shadow .3s ease;
 }
 
-/* Estimate */
-
 .btn-primary{
     border:2px solid #C62828;
 
@@ -174,8 +340,6 @@ HERO BUTTONS
     box-shadow:0 10px 24px rgba(198,40,40,.22);
 }
 
-/* Booking */
-
 .btn-secondary{
     border:2px solid #C62828;
 
@@ -184,7 +348,7 @@ HERO BUTTONS
 }
 
 .btn-secondary:hover{
-    border-color:#C62828;
+    border-color:#B71C1C;
 
     background:#FFF5F5;
     color:#B71C1C;
@@ -195,7 +359,7 @@ HERO BUTTONS
 }
 
 /* ==========================================================
-CHOICE HELP
+BUTTON HELP TEXT
 ========================================================== */
 
 .hero-choice-help{
@@ -236,7 +400,7 @@ CHOICE HELP
 }
 
 /* ==========================================================
-HERO INFO
+HERO INFO — DESKTOP ONLY
 ========================================================== */
 
 .hero-info{
@@ -286,8 +450,8 @@ TABLET
         font-size:36px;
     }
 
-    .hero-image{
-        min-height:390px;
+    .hero-slider{
+        height:390px;
 
         border-radius:20px;
     }
@@ -298,6 +462,21 @@ TABLET
 
     .hero-bottom > p{
         font-size:17px;
+    }
+
+    .hero-slider-arrow{
+        width:44px;
+        height:44px;
+
+        font-size:31px;
+    }
+
+    .hero-slider-prev{
+        left:15px;
+    }
+
+    .hero-slider-next{
+        right:15px;
     }
 
 }
@@ -322,7 +501,6 @@ MOBILE
 
     .hero-badge{
         margin-bottom:16px;
-
         padding:8px 13px;
 
         font-size:11px;
@@ -341,12 +519,32 @@ MOBILE
         line-height:1.12;
     }
 
-    .hero-image{
-        min-height:285px;
+    .hero-slider{
+        height:285px;
 
         border-radius:16px;
 
-        background-position:center;
+        box-shadow:0 15px 35px rgba(15,23,42,.13);
+    }
+
+    .hero-slider-arrow{
+        display:none;
+    }
+
+    .hero-slider-dots{
+        bottom:13px;
+
+        gap:7px;
+        padding:7px 9px;
+    }
+
+    .hero-slider-dot{
+        width:8px;
+        height:8px;
+    }
+
+    .hero-slider-dot.active{
+        width:22px;
     }
 
     .hero-bottom{
@@ -372,7 +570,7 @@ MOBILE
         min-width:0;
         min-height:48px;
 
-        padding:0 10px;
+        padding:0 8px;
 
         border-radius:10px;
 
@@ -389,7 +587,7 @@ MOBILE
     }
 
     .hero-choice-help span{
-        padding:0 4px;
+        padding:0 3px;
 
         font-size:11px;
         line-height:1.4;
@@ -399,20 +597,10 @@ MOBILE
         display:none;
     }
 
+    /* Remove as quatro informações no celular */
+
     .hero-info{
-        display:grid;
-        grid-template-columns:1fr 1fr;
-
-        gap:12px;
-
-        margin-top:24px;
-        padding-top:22px;
-
-        text-align:left;
-    }
-
-    .hero-info span{
-        font-size:12px;
+        display:none;
     }
 
 }
@@ -435,8 +623,8 @@ VERY SMALL MOBILE
         font-size:24px;
     }
 
-    .hero-image{
-        min-height:245px;
+    .hero-slider{
+        height:245px;
     }
 
     .hero-buttons a{
@@ -447,6 +635,21 @@ VERY SMALL MOBILE
 
     .hero-choice-help span{
         font-size:10px;
+    }
+
+}
+
+/* ==========================================================
+REDUCED MOTION
+========================================================== */
+
+@media(prefers-reduced-motion:reduce){
+
+    .hero-slide,
+    .hero-slider-arrow,
+    .hero-slider-dot,
+    .hero-buttons a{
+        transition:none;
     }
 
 }
