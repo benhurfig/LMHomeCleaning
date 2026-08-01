@@ -1,369 +1,452 @@
 /* ==========================================================
-   HERO
+HERO
 ========================================================== */
 
 .hero{
+    padding:70px 0 80px;
+
     background:#FFFFFF;
-    padding:90px 0;
 }
 
 .hero-container{
-    width:min(100% - 40px,1280px);
+    width:min(1180px, calc(100% - 40px));
+
     margin:0 auto;
-
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    grid-template-areas:
-        "top image"
-        "bottom image";
-
-    gap:34px 70px;
-    align-items:center;
 }
+
+/* ==========================================================
+HERO TOP
+========================================================== */
 
 .hero-top{
-    grid-area:top;
+    max-width:900px;
+
+    margin:0 auto 42px;
+
+    text-align:center;
 }
-
-.hero-bottom{
-    grid-area:bottom;
-}
-
-.hero-image{
-    grid-area:image;
-
-    width:100%;
-    min-height:560px;
-
-    border-radius:24px;
-
-    background-image:url("../images/hero-image.png");
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-
-    box-shadow:0 20px 50px rgba(0,0,0,.08);
-}
-
-/* Badge */
 
 .hero-badge{
-
     display:inline-flex;
     align-items:center;
+    justify-content:center;
 
-    padding:8px 18px;
+    margin-bottom:22px;
 
-    background:#FFF5F5;
+    padding:10px 18px;
 
-    color:#C62828;
-
+    border:1px solid rgba(198,40,40,.14);
     border-radius:999px;
 
+    background:#FFF5F5;
+    color:#C62828;
+
     font-size:14px;
-    font-weight:600;
-
-    margin-bottom:24px;
-
+    font-weight:700;
+    letter-spacing:.02em;
 }
 
-/* Titles */
+.hero-top h1{
+    margin:0;
 
-.hero h1{
+    color:#1F2937;
 
-    font-size:60px;
-    font-weight:800;
+    font-size:58px;
     line-height:1.05;
-
-    color:#2B2B2B;
-
-    margin-bottom:0;
-
+    font-weight:800;
+    letter-spacing:-.035em;
 }
 
 .hero-title-green{
-
-    font-size:60px;
-    font-weight:800;
-    line-height:1.05;
+    margin:10px 0 0;
 
     color:#C62828;
 
-    margin:0;
-
+    font-size:48px;
+    line-height:1.08;
+    font-weight:800;
+    letter-spacing:-.03em;
 }
 
-/* Description */
+/* ==========================================================
+HERO IMAGE
+========================================================== */
 
-.hero p{
+.hero-image{
+    width:100%;
+    min-height:470px;
 
-    max-width:560px;
+    /*
+    IMPORTANTE:
+    mantenha abaixo o mesmo caminho da imagem usado
+    no seu hero.css atual.
+    */
 
-    font-size:20px;
-    line-height:1.7;
+    background-image:url("../images/hero.jpg");
+
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+
+    border-radius:24px;
+
+    box-shadow:0 22px 55px rgba(15,23,42,.12);
+}
+
+/* ==========================================================
+HERO BOTTOM
+========================================================== */
+
+.hero-bottom{
+    max-width:900px;
+
+    margin:38px auto 0;
+
+    text-align:center;
+}
+
+.hero-bottom > p{
+    max-width:760px;
+
+    margin:0 auto;
 
     color:#5F6368;
 
-    margin-bottom:34px;
-
+    font-size:19px;
+    line-height:1.75;
 }
 
-/* Buttons */
+/* ==========================================================
+HERO BUTTONS
+========================================================== */
 
 .hero-buttons{
-
     display:flex;
+    align-items:center;
+    justify-content:center;
 
-    gap:18px;
+    gap:14px;
 
-    margin-bottom:24px;
-
+    margin-top:30px;
 }
 
-.btn-primary,
-.btn-secondary{
+.hero-buttons a{
+    min-width:210px;
+    min-height:54px;
 
     display:inline-flex;
     align-items:center;
     justify-content:center;
 
-    height:58px;
-    padding:0 34px;
+    padding:0 28px;
 
     border-radius:12px;
 
+    font-size:16px;
     font-weight:700;
 
-    transition:.30s;
+    text-decoration:none;
 
+    transition:
+        background .3s ease,
+        color .3s ease,
+        border-color .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
 }
 
+/* Estimate */
+
 .btn-primary{
+    border:2px solid #C62828;
 
     background:#C62828;
-
     color:#FFFFFF;
-
-    box-shadow:0 10px 25px rgba(198,40,40,.25);
-
 }
 
 .btn-primary:hover{
+    border-color:#B71C1C;
 
     background:#B71C1C;
 
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 24px rgba(198,40,40,.22);
 }
 
+/* Booking */
+
 .btn-secondary{
-
-    background:#FFFFFF;
-
     border:2px solid #C62828;
 
+    background:#FFFFFF;
     color:#C62828;
-
 }
 
 .btn-secondary:hover{
+    border-color:#C62828;
 
     background:#FFF5F5;
+    color:#B71C1C;
 
-}
+    transform:translateY(-2px);
 
-/* Info */
-
-.hero-info{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:16px;
-
-    color:#5F6368;
-
-    font-size:15px;
-
+    box-shadow:0 10px 24px rgba(15,23,42,.08);
 }
 
 /* ==========================================================
-   TABLET
+CHOICE HELP
 ========================================================== */
 
-@media(max-width:991px){
+.hero-choice-help{
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-.hero{
+    gap:26px;
 
-    padding:50px 0;
-
+    margin-top:16px;
 }
 
-.hero-container{
+.hero-choice-help span{
+    position:relative;
 
-    grid-template-columns:1fr;
-
-    grid-template-areas:
-
-    "top"
-
-    "image"
-
-    "bottom";
-
-    gap:28px;
-
-    text-align:center;
-
-}
-
-.hero-top,
-.hero-bottom{
-
-    width:100%;
-
-}
-
-.hero-badge{
-
-    margin:0 auto 18px;
+    color:#6B7280;
 
     font-size:13px;
-
-    padding:8px 16px;
-
+    line-height:1.5;
 }
 
-.hero h1{
+.hero-choice-help span + span::before{
+    content:"";
 
-    font-size:36px;
+    position:absolute;
 
-    line-height:1.08;
+    top:50%;
+    left:-14px;
 
-    margin-bottom:8px;
+    width:3px;
+    height:3px;
 
+    border-radius:50%;
+
+    background:#CBD5E1;
+
+    transform:translateY(-50%);
 }
 
-.hero-title-green{
-
-    font-size:36px;
-
-    line-height:1.08;
-
-}
-
-.hero-image{
-
-    min-height:260px;
-
-    border-radius:24px;
-
-}
-
-.hero p{
-
-    max-width:520px;
-
-    margin:0 auto 30px;
-
-    font-size:18px;
-
-    line-height:1.6;
-
-}
-
-.hero-buttons{
-
-    flex-direction:column;
-
-    align-items:center;
-
-    gap:16px;
-
-}
-
-.btn-primary,
-.btn-secondary{
-
-    width:100%;
-
-    max-width:360px;
-
-}
+/* ==========================================================
+HERO INFO
+========================================================== */
 
 .hero-info{
-
-    flex-direction:column;
-
-    gap:8px;
-
+    display:flex;
     align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
 
+    gap:12px 28px;
+
+    margin-top:30px;
+    padding-top:26px;
+
+    border-top:1px solid #EAEAEA;
 }
+
+.hero-info span{
+    color:#4B5563;
+
+    font-size:14px;
+    font-weight:600;
+}
+
+/* ==========================================================
+TABLET
+========================================================== */
+
+@media(max-width:900px){
+
+    .hero{
+        padding:55px 0 65px;
+    }
+
+    .hero-container{
+        width:min(100% - 32px, 780px);
+    }
+
+    .hero-top{
+        margin-bottom:32px;
+    }
+
+    .hero-top h1{
+        font-size:44px;
+    }
+
+    .hero-title-green{
+        font-size:36px;
+    }
+
+    .hero-image{
+        min-height:390px;
+
+        border-radius:20px;
+    }
+
+    .hero-bottom{
+        margin-top:32px;
+    }
+
+    .hero-bottom > p{
+        font-size:17px;
+    }
 
 }
 
 /* ==========================================================
-   MOBILE
+MOBILE
 ========================================================== */
 
 @media(max-width:600px){
 
-.hero{
+    .hero{
+        padding:38px 0 50px;
+    }
 
-    padding:35px 0;
+    .hero-container{
+        width:calc(100% - 28px);
+    }
+
+    .hero-top{
+        margin-bottom:24px;
+    }
+
+    .hero-badge{
+        margin-bottom:16px;
+
+        padding:8px 13px;
+
+        font-size:11px;
+    }
+
+    .hero-top h1{
+        font-size:34px;
+        line-height:1.08;
+        letter-spacing:-.025em;
+    }
+
+    .hero-title-green{
+        margin-top:8px;
+
+        font-size:27px;
+        line-height:1.12;
+    }
+
+    .hero-image{
+        min-height:285px;
+
+        border-radius:16px;
+
+        background-position:center;
+    }
+
+    .hero-bottom{
+        margin-top:25px;
+    }
+
+    .hero-bottom > p{
+        font-size:15px;
+        line-height:1.65;
+    }
+
+    .hero-buttons{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+
+        gap:10px;
+
+        margin-top:24px;
+    }
+
+    .hero-buttons a{
+        width:100%;
+        min-width:0;
+        min-height:48px;
+
+        padding:0 10px;
+
+        border-radius:10px;
+
+        font-size:13px;
+    }
+
+    .hero-choice-help{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+
+        gap:10px;
+
+        margin-top:12px;
+    }
+
+    .hero-choice-help span{
+        padding:0 4px;
+
+        font-size:11px;
+        line-height:1.4;
+    }
+
+    .hero-choice-help span + span::before{
+        display:none;
+    }
+
+    .hero-info{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+
+        gap:12px;
+
+        margin-top:24px;
+        padding-top:22px;
+
+        text-align:left;
+    }
+
+    .hero-info span{
+        font-size:12px;
+    }
 
 }
 
-.hero-container{
+/* ==========================================================
+VERY SMALL MOBILE
+========================================================== */
 
-    width:min(100% - 32px,1280px);
+@media(max-width:380px){
 
-    gap:24px;
+    .hero-container{
+        width:calc(100% - 22px);
+    }
 
-}
+    .hero-top h1{
+        font-size:30px;
+    }
 
-.hero-image{
+    .hero-title-green{
+        font-size:24px;
+    }
 
-    min-height:220px;
+    .hero-image{
+        min-height:245px;
+    }
 
-    border-radius:22px;
+    .hero-buttons a{
+        min-height:46px;
 
-}
+        font-size:12px;
+    }
 
-.hero-badge{
-
-    font-size:12px;
-
-    padding:8px 14px;
-
-}
-
-.hero h1{
-
-    font-size:28px;
-
-}
-
-.hero-title-green{
-
-    font-size:28px;
-
-}
-
-.hero p{
-
-    max-width:320px;
-
-    font-size:16px;
-
-    margin-bottom:28px;
-
-}
-
-.hero-info{
-
-    font-size:14px;
-
-}
+    .hero-choice-help span{
+        font-size:10px;
+    }
 
 }
