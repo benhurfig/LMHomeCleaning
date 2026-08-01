@@ -1,63 +1,83 @@
 /* ==========================================================
-   SERVICES
+SERVICES
 ========================================================== */
 
 .services{
-
-    padding:100px 0;
+    padding:110px 0;
 
     background:#FFFFFF;
-
 }
 
 .services .container{
+    width:min(1200px, calc(100% - 40px));
 
-    max-width:1200px;
-
-}
-
-.services h2{
-
-    font-size:48px;
-
-    line-height:1.1;
-
-    font-weight:800;
-
-    color:#2B2B2B;
-
-    margin:20px 0;
-
-}
-
-.services h2 span{
-
-    color:#C62828;
-
-}
-
-.section-description{
-
-    max-width:700px;
-
-    font-size:20px;
-
-    line-height:1.7;
-
-    color:#5F6368;
-
-    margin-bottom:70px;
-
+    margin:0 auto;
 }
 
 /* ==========================================================
-   SERVICE ROW
+SECTION HEADER
+========================================================== */
+
+.services-header{
+    max-width:780px;
+
+    margin-bottom:70px;
+}
+
+.services-badge{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-bottom:20px;
+    padding:9px 16px;
+
+    border:1px solid rgba(198,40,40,.15);
+    border-radius:999px;
+
+    background:#FFF5F5;
+    color:#C62828;
+
+    font-size:13px;
+    font-weight:700;
+}
+
+.services h2{
+    margin:0;
+
+    color:#172033;
+
+    font-size:52px;
+    line-height:1.08;
+    font-weight:800;
+    letter-spacing:-.035em;
+}
+
+.services h2 span{
+    display:block;
+
+    margin-top:8px;
+
+    color:#C62828;
+}
+
+.section-description{
+    max-width:700px;
+
+    margin:27px 0 0;
+
+    color:#5F6368;
+
+    font-size:19px;
+    line-height:1.75;
+}
+
+/* ==========================================================
+SERVICE ROW
 ========================================================== */
 
 .service-row{
-
     display:grid;
-
     grid-template-columns:1fr 1fr;
 
     gap:70px;
@@ -65,239 +85,268 @@
     align-items:center;
 
     margin-bottom:100px;
+}
 
+.service-row:last-child{
+    margin-bottom:0;
 }
 
 .service-row.reverse .service-image{
-
     order:2;
-
 }
 
 .service-row.reverse .service-content{
-
     order:1;
-
 }
 
 /* ==========================================================
-   IMAGE
+IMAGE
 ========================================================== */
 
 .service-image img{
+    display:block;
 
     width:100%;
+    height:auto;
 
     border-radius:24px;
-
-    display:block;
 
     object-fit:cover;
 
     box-shadow:0 15px 40px rgba(0,0,0,.08);
-
 }
 
 /* ==========================================================
-   CONTENT
+CONTENT
 ========================================================== */
 
-.service-content span{
+.service-content > span{
+    width:48px;
+    height:48px;
 
     display:inline-flex;
-
     align-items:center;
-
     justify-content:center;
 
-    width:48px;
-
-    height:48px;
+    margin-bottom:22px;
 
     border-radius:50%;
 
     background:#C62828;
-
     color:#FFFFFF;
 
     font-weight:700;
-
-    margin-bottom:22px;
-
 }
 
 .service-content h3{
+    margin:0 0 20px;
+
+    color:#172033;
 
     font-size:34px;
-
-    color:#2B2B2B;
-
-    margin-bottom:20px;
-
+    line-height:1.2;
 }
 
 .service-content p{
-
-    font-size:18px;
-
-    line-height:1.8;
+    margin:0 0 24px;
 
     color:#5F6368;
 
-    margin-bottom:24px;
-
+    font-size:18px;
+    line-height:1.8;
 }
 
 .service-content ul{
+    margin:0;
+    padding:0;
 
     list-style:none;
-
 }
 
 .service-content li{
-
     margin-bottom:12px;
 
     color:#2B2B2B;
 
     font-size:17px;
-
 }
 
 .service-content li::before{
-
     content:"✓ ";
 
     color:#C62828;
 
     font-weight:700;
-
 }
 
 /* ==========================================================
-   BUTTON
+BUTTON
 ========================================================== */
 
 .services .btn-primary{
-
     background:#C62828;
-
     color:#FFFFFF;
-
 }
 
 .services .btn-primary:hover{
-
     background:#B71C1C;
-
 }
 
 /* ==========================================================
-   MOBILE
+TABLET
 ========================================================== */
 
 @media(max-width:991px){
 
-.services{
+    .services{
+        padding:75px 0;
+    }
 
-    padding:70px 0;
+    .services .container{
+        width:min(100% - 32px, 780px);
+    }
+
+    .services-header{
+        max-width:680px;
+
+        margin:0 auto 55px;
+
+        text-align:center;
+    }
+
+    .services-badge{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .services h2{
+        font-size:42px;
+
+        text-align:center;
+    }
+
+    .section-description{
+        margin:24px auto 0;
+
+        text-align:center;
+
+        font-size:18px;
+    }
+
+    .service-row{
+        grid-template-columns:1fr;
+
+        gap:35px;
+
+        margin-bottom:75px;
+    }
+
+    .service-row.reverse .service-image,
+    .service-row.reverse .service-content{
+        order:unset;
+    }
+
+    .service-content{
+        text-align:center;
+    }
+
+    .service-content > span{
+        margin:0 auto 22px;
+    }
+
+    .service-content ul{
+        display:inline-block;
+
+        text-align:left;
+    }
 
 }
 
-.services h2{
-
-    font-size:38px;
-
-    text-align:center;
-
-}
-
-.section-description{
-
-    text-align:center;
-
-    font-size:18px;
-
-    margin:0 auto 50px;
-
-}
-
-.service-row{
-
-    grid-template-columns:1fr;
-
-    gap:35px;
-
-    margin-bottom:70px;
-
-}
-
-.service-row.reverse .service-image,
-
-.service-row.reverse .service-content{
-
-    order:unset;
-
-}
-
-.service-content{
-
-    text-align:center;
-
-}
-
-.service-content span{
-
-    margin:0 auto 22px;
-
-}
-
-.service-content ul{
-
-    display:inline-block;
-
-    text-align:left;
-
-}
-
-}
+/* ==========================================================
+MOBILE
+========================================================== */
 
 @media(max-width:600px){
 
-.services{
+    .services{
+        padding:58px 0;
+    }
 
-    padding:50px 0;
+    .services .container{
+        width:calc(100% - 28px);
+    }
+
+    .services-header{
+        margin-bottom:45px;
+    }
+
+    .services-badge{
+        margin-bottom:17px;
+        padding:8px 13px;
+
+        font-size:11px;
+    }
+
+    .services h2{
+        font-size:32px;
+        line-height:1.12;
+    }
+
+    .services h2 span{
+        margin-top:7px;
+    }
+
+    .section-description{
+        margin-top:20px;
+
+        font-size:15px;
+        line-height:1.65;
+    }
+
+    .service-row{
+        gap:30px;
+
+        margin-bottom:65px;
+    }
+
+    .service-image img{
+        border-radius:18px;
+    }
+
+    .service-content > span{
+        width:44px;
+        height:44px;
+
+        margin-bottom:18px;
+    }
+
+    .service-content h3{
+        font-size:26px;
+    }
+
+    .service-content p{
+        font-size:16px;
+        line-height:1.7;
+    }
+
+    .service-content li{
+        font-size:15px;
+    }
 
 }
 
-.services h2{
+/* ==========================================================
+VERY SMALL MOBILE
+========================================================== */
 
-    font-size:30px;
+@media(max-width:380px){
 
-}
+    .services .container{
+        width:calc(100% - 22px);
+    }
 
-.section-description{
-
-    font-size:16px;
-
-}
-
-.service-content h3{
-
-    font-size:26px;
-
-}
-
-.service-content p{
-
-    font-size:16px;
-
-}
-
-.service-content li{
-
-    font-size:15px;
-
-}
+    .services h2{
+        font-size:29px;
+    }
 
 }

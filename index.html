@@ -191,6 +191,8 @@ HEAD
         rel="stylesheet"
         href="/assets/css/style.css">
 
+        
+
     <!-- ==========================================================
          GOOGLE ANALYTICS
     ========================================================== -->
@@ -355,11 +357,97 @@ HERO
 
 <section id="hero" class="hero">
 
+    <!-- ======================================================
+    SLIDER
+    ======================================================= -->
+
+    <div class="hero-slider"
+         aria-label="Examples of professionally cleaned homes">
+
+        <div class="hero-slides">
+
+            <div class="hero-slide active">
+
+                <img src="/assets/images/hero/hero-01.png"
+                     alt="Professionally cleaned kitchen"
+                     width="1600"
+                     height="900"
+                     fetchpriority="high">
+
+            </div>
+
+            <div class="hero-slide">
+
+                <img src="/assets/images/hero/hero-02.png"
+                     alt="Professionally cleaned living room"
+                     width="1600"
+                     height="900"
+                     loading="lazy">
+
+            </div>
+
+            <div class="hero-slide">
+
+                <img src="/assets/images/hero/hero-03.png"
+                     alt="Professionally cleaned bathroom"
+                     width="1600"
+                     height="900"
+                     loading="lazy">
+
+            </div>
+
+        </div>
+
+        <!-- ARROWS -->
+
+        <button type="button"
+                class="hero-slider-arrow hero-slider-prev"
+                aria-label="Previous image">
+
+            ‹
+
+        </button>
+
+        <button type="button"
+                class="hero-slider-arrow hero-slider-next"
+                aria-label="Next image">
+
+            ›
+
+        </button>
+
+        <!-- DOTS -->
+
+        <div class="hero-slider-dots"
+             aria-label="Choose an image">
+
+            <button type="button"
+                    class="hero-slider-dot active"
+                    aria-label="Show kitchen image"
+                    aria-current="true">
+            </button>
+
+            <button type="button"
+                    class="hero-slider-dot"
+                    aria-label="Show living room image">
+            </button>
+
+            <button type="button"
+                    class="hero-slider-dot"
+                    aria-label="Show bathroom image">
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ======================================================
+    HERO CONTENT
+    ======================================================= -->
+
     <div class="hero-container">
 
-        <!-- HERO TOP -->
-
-        <div class="hero-top">
+        <div class="hero-content">
 
             <span class="hero-badge">
 
@@ -371,103 +459,13 @@ HERO
 
                 Professional House Cleaning
 
+                <span>
+                    A Cleaner Home Starts Here
+                </span>
+
             </h1>
 
-            <h2 class="hero-title-green">
-
-                A Cleaner Home Starts Here
-
-            </h2>
-
-        </div>
-
-        <!-- HERO SLIDER -->
-
-        <div class="hero-slider"
-             aria-label="Examples of professionally cleaned homes">
-
-            <div class="hero-slides">
-
-                <div class="hero-slide active">
-
-                    <img src="assets/images/hero/hero-01.png"
-                         alt="Professionally cleaned kitchen"
-                         width="1400"
-                         height="780"
-                         fetchpriority="high">
-
-                </div>
-
-                <div class="hero-slide">
-
-                    <img src="assets/images/hero/hero-02.png"
-                         alt="Professionally cleaned living room"
-                         width="1400"
-                         height="780"
-                         loading="lazy">
-
-                </div>
-
-                <div class="hero-slide">
-
-                    <img src="assets/images/hero/hero-03.png"
-                         alt="Professionally cleaned bathroom"
-                         width="1400"
-                         height="780"
-                         loading="lazy">
-
-                </div>
-
-            </div>
-
-            <!-- SETAS -->
-
-            <button type="button"
-                    class="hero-slider-arrow hero-slider-prev"
-                    aria-label="Previous image">
-
-                ‹
-
-            </button>
-
-            <button type="button"
-                    class="hero-slider-arrow hero-slider-next"
-                    aria-label="Next image">
-
-                ›
-
-            </button>
-
-            <!-- BOLINHAS -->
-
-            <div class="hero-slider-dots"
-                 aria-label="Choose an image">
-
-                <button type="button"
-                        class="hero-slider-dot active"
-                        aria-label="Show kitchen image"
-                        aria-current="true">
-                </button>
-
-                <button type="button"
-                        class="hero-slider-dot"
-                        aria-label="Show living room image">
-                </button>
-
-                <button type="button"
-                        class="hero-slider-dot"
-                        aria-label="Show bathroom image">
-                </button>
-
-            </div>
-
-        </div>
-
-        <!-- HERO BOTTOM -->
-
-        <div class="hero-bottom">
-
-            <p>
+            <p class="hero-description">
 
                 Get your personalized cleaning estimate or schedule your
                 service online. Two simple ways to get started.
@@ -477,18 +475,22 @@ HERO
             <div class="hero-buttons">
 
                 <a href="#estimate"
-                   class="btn-primary"
+                   class="hero-button hero-button-primary"
                    data-track="estimate_info_click"
                    data-location="hero_cta">
+
+                    <span>⚡</span>
 
                     Get My Estimate
 
                 </a>
 
                 <a href="#booking"
-                   class="btn-secondary"
+                   class="hero-button hero-button-secondary"
                    data-track="booking_info_click"
                    data-location="hero_cta">
+
+                    <span>📅</span>
 
                     Book Online
 
@@ -499,28 +501,22 @@ HERO
             <div class="hero-choice-help">
 
                 <span>
-
                     Need a price first? Choose Estimate.
-
                 </span>
 
                 <span>
-
                     Ready to schedule? Choose Book Online.
-
                 </span>
 
             </div>
 
-            <div class="hero-info">
+            <div class="hero-trust">
 
-                <span>✨ Premium Cleaning</span>
+                <span>✓ No obligation</span>
 
-                <span>⚡ Instant Estimate</span>
+                <span>✓ Online scheduling</span>
 
-                <span>📅 Online Booking</span>
-
-                <span>✓ Fully Insured</span>
+                <span>✓ Fully insured</span>
 
             </div>
 
@@ -534,133 +530,6 @@ HERO
 END HERO
 ========================================================== -->
 
-
-<!-- ==========================================================
-Estimate
-========================================================== -->
-
-<section id="estimate" class="estimate">
-
-    <div class="container estimate-container">
-
-        <!-- TOP -->
-
-        <div class="estimate-top">
-
-            <span class="section-badge">
-                ⚡ Online Estimate
-            </span>
-
-            <h2>
-                Get Your Real Estimate
-                <span>In Under 60 Seconds</span>
-            </h2>
-
-        </div>
-
-        <!-- IMAGE -->
-
-        <div class="estimate-image">
-
-            <img
-                src="assets/images/estimate-phone.png"
-                alt="Online House Cleaning Estimate">
-
-        </div>
-
-        <!-- BOTTOM -->
-
-        <div class="estimate-bottom">
-
-            <p>
-                Answer a few simple questions and receive a real cleaning estimate instantly.
-                Then choose your preferred date and request your booking online.
-            </p>
-
-            <div class="estimate-steps">
-
-                <!-- Step 1 -->
-
-                <div class="step">
-
-                    <div class="step-number">1</div>
-
-                    <div>
-
-                        <h3>Select your home</h3>
-
-                        <p>Bedrooms, bathrooms and property type.</p>
-
-                    </div>
-
-                </div>
-
-                <!-- Step 2 -->
-
-                <div class="step">
-
-                    <div class="step-number">2</div>
-
-                    <div>
-
-                        <h3>Choose your service</h3>
-
-                        <p>Regular, Deep, Move Out and more.</p>
-
-                    </div>
-
-                </div>
-
-                <!-- Step 3 -->
-
-                <div class="step">
-
-                    <div class="step-number">3</div>
-
-                    <div>
-
-                        <h3>See your real price</h3>
-
-                        <p>No waiting. No phone calls.</p>
-
-                    </div>
-
-                </div>
-
-                <!-- Step 4 -->
-
-                <div class="step">
-
-                    <div class="step-number">4</div>
-
-                    <div>
-
-                        <h3>Request your booking</h3>
-
-                        <p>Request your booking online in minutes.</p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <a href="https://www.smartimateapp.com/lm-estimate"
-               class="btn-primary">
-
-                Get Real Estimate
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- ==========================================================
-END HOW IT WORKS - estimate 
-========================================================== -->
-
 <!-- ==========================================================
 SERVICES
 ========================================================== -->
@@ -669,21 +538,28 @@ SERVICES
 
     <div class="container">
 
-        <span class="section-badge">
-            Our Services
-        </span>
+        <!-- SECTION HEADER -->
 
-        <h2>
-            Professional Cleaning Services<br>
-            For Every Situation
-        </h2>
+        <div class="services-header">
 
-        <p class="section-description">
+            <span class="services-badge">
+                ✨ Our Services
+            </span>
 
-            Whether you need recurring cleaning or a one-time deep clean,
-            our experienced team is ready to help.
+            <h2>
+                Professional Cleaning Services
 
-        </p>
+                <span>
+                    For Every Situation
+                </span>
+            </h2>
+
+            <p class="section-description">
+                Whether you need recurring cleaning or a one-time deep clean,
+                our experienced team is ready to help.
+            </p>
+
+        </div>
 
         <!-- Service 1 -->
 
@@ -703,19 +579,15 @@ SERVICES
                 <h3>Regular House Cleaning</h3>
 
                 <p>
-
                     Keep your home consistently clean with weekly,
                     bi-weekly or monthly cleaning services customized
                     for your lifestyle.
-
                 </p>
 
                 <ul>
-
                     <li>Weekly or Bi-weekly</li>
                     <li>Kitchens & Bathrooms</li>
                     <li>Bedrooms & Living Areas</li>
-
                 </ul>
 
             </div>
@@ -740,18 +612,14 @@ SERVICES
                 <h3>Deep Cleaning</h3>
 
                 <p>
-
                     Perfect for first-time cleaning or homes that
                     need extra attention and detailed care.
-
                 </p>
 
                 <ul>
-
                     <li>Detailed Cleaning</li>
                     <li>Baseboards & Doors</li>
                     <li>Hard-to-Reach Areas</li>
-
                 </ul>
 
             </div>
@@ -776,18 +644,14 @@ SERVICES
                 <h3>Move In / Move Out Cleaning</h3>
 
                 <p>
-
                     Make moving easier with a complete cleaning
                     before moving in or after moving out.
-
                 </p>
 
                 <ul>
-
                     <li>Empty Home Cleaning</li>
                     <li>Cabinets Inside</li>
                     <li>Ready for New Owners</li>
-
                 </ul>
 
             </div>
@@ -812,18 +676,14 @@ SERVICES
                 <h3>Post Construction Cleaning</h3>
 
                 <p>
-
                     Remove dust, debris and construction residue
                     to leave your property move-in ready.
-
                 </p>
 
                 <ul>
-
                     <li>Dust Removal</li>
                     <li>Detailed Finish</li>
                     <li>Residential & Commercial</li>
-
                 </ul>
 
             </div>
@@ -834,267 +694,231 @@ SERVICES
 
 </section>
 
-
-<!-- End services -->
+<!-- End Services -->
 <!-- ==========================================================
-REAL RESULTS
+SMART BOOKING / AVAILABILITY
 ========================================================== -->
 
-<section id="results" class="results">
+<section id="booking" class="booking-section">
 
-    <div class="container">
+    <div class="container booking-container">
 
-        <span class="section-badge">
-            ✨ Real Results
-        </span>
+        <!-- CONTENT -->
 
-        <h2>
-            See The Difference
-            <span>Before & After</span>
-        </h2>
+        <div class="booking-content">
 
-        <p class="section-description">
+            <div class="booking-status">
 
-            Real homes. Real transformations.
-            See why homeowners trust our professional cleaning services.
+                <span class="booking-status-dot"></span>
 
-        </p>
-
-        <!-- ===========================
-        RESULT 01
-        =========================== -->
-
-        <div class="result">
-
-            <div class="result-title">
-
-                <h3>Regular Cleaning</h3>
-
-                <p>Modern Kitchen</p>
+                Now Accepting New Clients
 
             </div>
 
-            <div class="result-gallery">
+            <span class="booking-eyebrow">
 
-                <div class="photo">
+                Online Scheduling
 
-                    <span class="tag before">
-                        BEFORE
-                    </span>
+            </span>
 
-                    <img src="assets/images/before-kitchen.png"
-                        alt="Kitchen Before">
+            <h2>
+
+                Cleaning Appointments
+
+                <span>
+                    Available for
+                    <strong id="bookingMonthYear">This Month</strong>
+                </span>
+
+            </h2>
+
+            <p class="booking-description">
+
+                Ready for a cleaner home? Choose your cleaning service,
+                preferred date and available time directly through our
+                secure online booking system.
+
+            </p>
+
+            <div class="booking-benefits">
+
+                <div class="booking-benefit">
+
+                    <span class="booking-benefit-icon">✓</span>
+
+                    <div>
+
+                        <strong>Choose your service</strong>
+
+                        <span>
+                            Select the cleaning option that fits your needs.
+                        </span>
+
+                    </div>
 
                 </div>
 
-                <div class="photo">
+                <div class="booking-benefit">
 
-                    <span class="tag after">
-                        AFTER
-                    </span>
+                    <span class="booking-benefit-icon">✓</span>
 
-                    <img src="assets/images/after-kitchen.png"
-                        alt="Kitchen After">
+                    <div>
+
+                        <strong>View available times</strong>
+
+                        <span>
+                            See the current schedule before submitting.
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="booking-benefit">
+
+                    <span class="booking-benefit-icon">✓</span>
+
+                    <div>
+
+                        <strong>Book in minutes</strong>
+
+                        <span>
+                            Complete your booking from any device.
+                        </span>
+
+                    </div>
 
                 </div>
 
             </div>
 
-            <div class="mini-review">
+            <a href="https://www.smartimateapp.com/smart-booking/?company=lm-booking"
+               class="booking-button"
+               data-track="booking_click"
+               data-location="booking_section">
 
-                ⭐⭐⭐⭐⭐
+                <span class="booking-button-icon">📅</span>
 
-                <p>
+                <span>
 
-                    "My kitchen looked brand new after the cleaning."
+                    <strong>Book Your Cleaning</strong>
 
-                </p>
+                    <small>View available dates and times</small>
 
-                <strong>
+                </span>
 
-                    Sarah M. • Framingham
+                <span class="booking-button-arrow">→</span>
 
-                </strong>
+            </a>
 
-            </div>
+            <p class="booking-secure">
+
+                🔒 Secure online scheduling. No account required.
+
+            </p>
 
         </div>
 
-        <!-- ===========================
-        RESULT 02
-        =========================== -->
+        <!-- PREMIUM CALENDAR CARD -->
 
-        <div class="result">
+        <div class="booking-visual">
 
-            <div class="result-title">
+            <div class="booking-glow"></div>
 
-                <h3>Deep Cleaning</h3>
+            <div class="booking-calendar-card">
 
-                <p>Bathroom</p>
+                <div class="booking-calendar-header">
 
-            </div>
+                    <div>
 
-            <div class="result-gallery">
+                        <span class="booking-calendar-label">
+                            Booking Calendar
+                        </span>
 
-                <div class="photo">
+                        <h3 id="bookingCalendarMonth">
+                            Current Month
+                        </h3>
 
-                    <span class="tag before">
-                        BEFORE
-                    </span>
+                    </div>
 
-                    <img src="assets/images/before-bathroom.png"
-                        alt="Bathroom Before">
+                    <div class="booking-calendar-live">
 
-                </div>
+                        <span></span>
 
-                <div class="photo">
+                        Live Availability
 
-                    <span class="tag after">
-                        AFTER
-                    </span>
-
-                    <img src="assets/images/after-bathroom.png"
-                        alt="Bathroom After">
+                    </div>
 
                 </div>
 
-            </div>
+                <div class="booking-calendar-divider"></div>
 
-            <div class="mini-review">
+                <p class="booking-calendar-intro">
 
-                ⭐⭐⭐⭐⭐
-
-                <p>
-
-                    "The bathroom has never looked this clean."
+                    Select a preferred day to view the available times.
 
                 </p>
 
-                <strong>
+                <div class="booking-date-list"
+                     id="bookingDateList">
 
-                    Jessica T. • Natick
-
-                </strong>
-
-            </div>
-
-        </div>
-
-        <!-- ===========================
-        RESULT 03
-        =========================== -->
-
-        <div class="result">
-
-            <div class="result-title">
-
-                <h3>Move Out Cleaning</h3>
-
-                <p>Living Room</p>
-
-            </div>
-
-            <div class="result-gallery">
-
-                <div class="photo">
-
-                    <span class="tag before">
-                        BEFORE
-                    </span>
-
-                    <img src="assets/images/before-moveout.png"
-                        alt="Move Out Before">
+                    <!-- Criado automaticamente pelo JavaScript -->
 
                 </div>
 
-                <div class="photo">
+                <div class="booking-selected">
 
-                    <span class="tag after">
-                        AFTER
-                    </span>
+                    <div class="booking-selected-icon">
 
-                    <img src="assets/images/after-moveout.png"
-                        alt="Move Out After">
+                        ✓
+
+                    </div>
+
+                    <div>
+
+                        <span>Simple online scheduling</span>
+
+                        <strong>
+                            Choose your service, date and time
+                        </strong>
+
+                    </div>
+
+                </div>
+
+                <div class="booking-calendar-footer">
+
+                    <div>
+
+                        <span>Average booking time</span>
+
+                        <strong>Less than 2 minutes</strong>
+
+                    </div>
+
+                    <div class="booking-calendar-badge">
+
+                        24/7
+
+                    </div>
 
                 </div>
 
             </div>
 
-            <div class="mini-review">
+            <div class="booking-floating-card booking-floating-top">
 
-                ⭐⭐⭐⭐⭐
+                <span>✓</span>
 
-                <p>
-
-                    "We got our full deposit back."
-
-                </p>
-
-                <strong>
-
-                    Michael R. • Boston
-
-                </strong>
+                New clients welcome
 
             </div>
 
-        </div>
+            <div class="booking-floating-card booking-floating-bottom">
 
-        <!-- ===========================
-        RESULT 04
-        =========================== -->
+                <span>⚡</span>
 
-        <div class="result">
-
-            <div class="result-title">
-
-                <h3>Post Construction Cleaning</h3>
-
-                <p>Newly Renovated Living Room</p>
-
-            </div>
-
-            <div class="result-gallery">
-
-                <div class="photo">
-
-                    <span class="tag before">
-                        BEFORE
-                    </span>
-
-                    <img src="assets/images/before-post-construction.png"
-                        alt="Post Construction Before">
-
-                </div>
-
-                <div class="photo">
-
-                    <span class="tag after">
-                        AFTER
-                    </span>
-
-                    <img src="assets/images/after-post-construction.png"
-                        alt="Post Construction After">
-
-                </div>
-
-            </div>
-
-            <div class="mini-review">
-
-                ⭐⭐⭐⭐⭐
-
-                <p>
-
-                    "Every bit of construction dust was gone. The house was move-in ready the same day."
-
-                </p>
-
-                <strong>
-
-                    Emily S. • Newton
-
-                </strong>
+                Fast online booking
 
             </div>
 
@@ -1105,9 +929,1002 @@ REAL RESULTS
 </section>
 
 <!-- ==========================================================
-END REAL RESULTS
+END SMART BOOKING
+========================================================== -->
+<!-- ==========================================================
+REAL RESULTS
 ========================================================== -->
 
+<section id="results" class="results">
+
+    <div class="container">
+
+        <!-- SECTION HEADER -->
+
+        <div class="results-header">
+
+            <span class="results-badge">
+                ✨ Real Results
+            </span>
+
+            <h2>
+                See The Difference
+
+                <span>
+                    Before & After
+                </span>
+            </h2>
+
+            <p class="results-description">
+                Real homes. Real transformations.
+                See why homeowners trust our professional cleaning services.
+            </p>
+
+        </div>
+
+        <!-- ==================================================
+        RESULT 01
+        ================================================== -->
+
+        <article class="result-card">
+
+            <div class="result-card-header">
+
+                <div>
+
+                    <span class="result-number">
+                        01
+                    </span>
+
+                    <h3>
+                        Regular Cleaning
+                    </h3>
+
+                    <p>
+                        Modern Kitchen
+                    </p>
+
+                </div>
+
+                <span class="result-type">
+                    Residential Cleaning
+                </span>
+
+            </div>
+
+            <div class="result-comparison">
+
+                <div class="result-photo-card">
+
+                    <div class="result-photo-label result-before-label">
+                        Before
+                    </div>
+
+                    <div class="result-photo">
+
+                        <img src="assets/images/before-kitchen.png"
+                             alt="Kitchen before professional cleaning">
+
+                    </div>
+
+                    <p>
+                        Grease, dust and everyday buildup.
+                    </p>
+
+                </div>
+
+                <div class="result-divider">
+
+                    <span>
+                        →
+                    </span>
+
+                </div>
+
+                <div class="result-photo-card">
+
+                    <div class="result-photo-label result-after-label">
+                        After
+                    </div>
+
+                    <div class="result-photo">
+
+                        <img src="assets/images/after-kitchen.png"
+                             alt="Kitchen after professional cleaning">
+
+                    </div>
+
+                    <p>
+                        Clean, polished and ready to enjoy.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="result-review">
+
+                <div class="result-review-stars">
+                    ★★★★★
+                </div>
+
+                <blockquote>
+                    “My kitchen looked brand new after the cleaning.”
+                </blockquote>
+
+                <div class="result-review-author">
+
+                    <span class="result-review-avatar">
+                        SM
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Sarah M.
+                        </strong>
+
+                        <span>
+                            Framingham, MA
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- ==================================================
+        RESULT 02
+        ================================================== -->
+
+        <article class="result-card">
+
+            <div class="result-card-header">
+
+                <div>
+
+                    <span class="result-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Deep Cleaning
+                    </h3>
+
+                    <p>
+                        Bathroom
+                    </p>
+
+                </div>
+
+                <span class="result-type">
+                    Detailed Cleaning
+                </span>
+
+            </div>
+
+            <div class="result-comparison">
+
+                <div class="result-photo-card">
+
+                    <div class="result-photo-label result-before-label">
+                        Before
+                    </div>
+
+                    <div class="result-photo">
+
+                        <img src="assets/images/before-bathroom.png"
+                             alt="Bathroom before deep cleaning">
+
+                    </div>
+
+                    <p>
+                        Soap residue, moisture marks and buildup.
+                    </p>
+
+                </div>
+
+                <div class="result-divider">
+
+                    <span>
+                        →
+                    </span>
+
+                </div>
+
+                <div class="result-photo-card">
+
+                    <div class="result-photo-label result-after-label">
+                        After
+                    </div>
+
+                    <div class="result-photo">
+
+                        <img src="assets/images/after-bathroom.png"
+                             alt="Bathroom after deep cleaning">
+
+                    </div>
+
+                    <p>
+                        Fresh, detailed and completely renewed.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="result-review">
+
+                <div class="result-review-stars">
+                    ★★★★★
+                </div>
+
+                <blockquote>
+                    “The bathroom has never looked this clean.”
+                </blockquote>
+
+                <div class="result-review-author">
+
+                    <span class="result-review-avatar">
+                        JT
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Jessica T.
+                        </strong>
+
+                        <span>
+                            Natick, MA
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- ==================================================
+        RESULT 03
+        ================================================== -->
+
+        <article class="result-card">
+
+            <div class="result-card-header">
+
+                <div>
+
+                    <span class="result-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Move Out Cleaning
+                    </h3>
+
+                    <p>
+                        Living Room
+                    </p>
+
+                </div>
+
+                <span class="result-type">
+                    Move In / Move Out
+                </span>
+
+            </div>
+
+            <div class="result-comparison">
+
+                <div class="result-photo-card">
+
+                    <div class="result-photo-label result-before-label">
+                        Before
+                    </div>
+
+                    <div class="result-photo">
+
+                        <img src="assets/images/before-moveout.png"
+                             alt="Living room before move out cleaning">
+
+                    </div>
+
+                    <p>
+                        Dust, marks and move-out residue.
+                    </p>
+
+                </div>
+
+                <div class="result-divider">
+
+                    <span>
+                        →
+                    </span>
+
+                </div>
+
+                <div class="result-photo-card">
+
+                    <div class="result-photo-label result-after-label">
+                        After
+                    </div>
+
+                    <div class="result-photo">
+
+                        <img src="assets/images/after-moveout.png"
+                             alt="Living room after move out cleaning">
+
+                    </div>
+
+                    <p>
+                        Clean, empty and ready for inspection.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="result-review">
+
+                <div class="result-review-stars">
+                    ★★★★★
+                </div>
+
+                <blockquote>
+                    “We got our full deposit back.”
+                </blockquote>
+
+                <div class="result-review-author">
+
+                    <span class="result-review-avatar">
+                        MR
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Michael R.
+                        </strong>
+
+                        <span>
+                            Boston, MA
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- ==================================================
+        RESULT 04
+        ================================================== -->
+
+        <article class="result-card">
+
+            <div class="result-card-header">
+
+                <div>
+
+                    <span class="result-number">
+                        04
+                    </span>
+
+                    <h3>
+                        Post Construction Cleaning
+                    </h3>
+
+                    <p>
+                        Newly Renovated Living Room
+                    </p>
+
+                </div>
+
+                <span class="result-type">
+                    Post Construction
+                </span>
+
+            </div>
+
+            <div class="result-comparison">
+
+                <div class="result-photo-card">
+
+                    <div class="result-photo-label result-before-label">
+                        Before
+                    </div>
+
+                    <div class="result-photo">
+
+                        <img src="assets/images/before-post-construction.png"
+                             alt="Living room before post construction cleaning">
+
+                    </div>
+
+                    <p>
+                        Fine dust, residue and renovation debris.
+                    </p>
+
+                </div>
+
+                <div class="result-divider">
+
+                    <span>
+                        →
+                    </span>
+
+                </div>
+
+                <div class="result-photo-card">
+
+                    <div class="result-photo-label result-after-label">
+                        After
+                    </div>
+
+                    <div class="result-photo">
+
+                        <img src="assets/images/after-post-construction.png"
+                             alt="Living room after post construction cleaning">
+
+                    </div>
+
+                    <p>
+                        Finished, polished and move-in ready.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="result-review">
+
+                <div class="result-review-stars">
+                    ★★★★★
+                </div>
+
+                <blockquote>
+                    “Every bit of construction dust was gone. The house was move-in ready the same day.”
+                </blockquote>
+
+                <div class="result-review-author">
+
+                    <span class="result-review-avatar">
+                        ES
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Emily S.
+                        </strong>
+
+                        <span>
+                            Newton, MA
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+END REAL RESULTS
+========================================================== -->
+<!-- ==========================================================
+SMART ESTIMATE
+========================================================== -->
+
+<section id="estimate" class="smart-estimate">
+
+    <div class="container smart-estimate-container">
+
+        <!-- ==================================================
+        DESKTOP FLOW VISUAL
+        ================================================== -->
+
+        <div class="estimate-flow-visual estimate-flow-desktop">
+
+            <div class="estimate-flow-glow"></div>
+
+            <div class="estimate-flow-card">
+
+                <div class="estimate-flow-header">
+
+                    <div>
+
+                        <span class="estimate-flow-label">
+                            Smart Estimate
+                        </span>
+
+                        <h3>
+                            Your Path To A Real Estimate
+                        </h3>
+
+                    </div>
+
+                    <div class="estimate-flow-online">
+
+                        <span></span>
+
+                        Online
+
+                    </div>
+
+                </div>
+
+                <div class="estimate-flow-divider"></div>
+
+                <div class="estimate-timeline">
+
+                    <!-- STEP 1 -->
+
+                    <div class="estimate-timeline-item estimate-step-1">
+
+                        <div class="estimate-timeline-marker">
+
+                            <span>🏠</span>
+
+                        </div>
+
+                        <div class="estimate-timeline-content">
+
+                            <div class="estimate-timeline-top">
+
+                                <span>Step 1</span>
+
+                                <strong>Home Details</strong>
+
+                            </div>
+
+                            <p>
+                                Bedrooms, bathrooms and property type.
+                            </p>
+
+                            <div class="estimate-option-tags">
+
+                                <span>Bedrooms</span>
+
+                                <span>Bathrooms</span>
+
+                                <span>Property</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="estimate-timeline-line estimate-line-1"></div>
+
+                    <!-- STEP 2 -->
+
+                    <div class="estimate-timeline-item estimate-step-2">
+
+                        <div class="estimate-timeline-marker">
+
+                            <span>✨</span>
+
+                        </div>
+
+                        <div class="estimate-timeline-content">
+
+                            <div class="estimate-timeline-top">
+
+                                <span>Step 2</span>
+
+                                <strong>Choose Your Service</strong>
+
+                            </div>
+
+                            <p>
+                                Select the cleaning service you need.
+                            </p>
+
+                            <div class="estimate-option-tags">
+
+                                <span>Regular</span>
+
+                                <span>Deep</span>
+
+                                <span>Move Out</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="estimate-timeline-line estimate-line-2"></div>
+
+                    <!-- STEP 3 -->
+
+                    <div class="estimate-timeline-item estimate-step-3">
+
+                        <div class="estimate-timeline-marker">
+
+                            <span>＋</span>
+
+                        </div>
+
+                        <div class="estimate-timeline-content">
+
+                            <div class="estimate-timeline-top">
+
+                                <span>Step 3</span>
+
+                                <strong>Add What You Need</strong>
+
+                            </div>
+
+                            <p>
+                                Add optional services only when needed.
+                            </p>
+
+                            <div class="estimate-option-tags">
+
+                                <span>Inside Oven</span>
+
+                                <span>Inside Fridge</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="estimate-timeline-line estimate-line-3"></div>
+
+                    <!-- RESULT -->
+
+                    <div class="estimate-timeline-item estimate-step-result">
+
+                        <div class="estimate-timeline-marker estimate-result-marker">
+
+                            <span>⚡</span>
+
+                        </div>
+
+                        <div class="estimate-timeline-content estimate-result-content">
+
+                            <div>
+
+                                <span class="estimate-result-label">
+                                    Your personalized estimate
+                                </span>
+
+                                <strong>
+                                    Ready in under 60 seconds
+                                </strong>
+
+                            </div>
+
+                            <div class="estimate-result-free">
+
+                                FREE
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="estimate-flow-footer">
+
+                    <span>✓ No payment required</span>
+
+                    <span>✓ No account required</span>
+
+                    <span>✓ No phone call required</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ==================================================
+        CONTENT
+        ================================================== -->
+
+        <div class="estimate-content">
+
+            <div class="estimate-status">
+
+                <span>⚡</span>
+
+                Instant Online Estimate
+
+            </div>
+
+            <span class="estimate-eyebrow">
+
+                Simple. Fast. Transparent.
+
+            </span>
+
+            <h2>
+
+                Get Your Personalized
+
+                <span>
+                    Cleaning Estimate
+                </span>
+
+            </h2>
+
+            <p class="estimate-description">
+
+                Tell us a little about your home and the service you need.
+                Your personalized cleaning estimate is calculated online
+                in under 60 seconds.
+
+            </p>
+
+            <!-- MOBILE FLOW VISUAL -->
+
+            <div class="estimate-flow-mobile">
+
+                <div class="estimate-flow-card">
+
+                    <div class="estimate-flow-header">
+
+                        <div>
+
+                            <span class="estimate-flow-label">
+                                Smart Estimate
+                            </span>
+
+                            <h3>
+                                How It Works
+                            </h3>
+
+                        </div>
+
+                        <div class="estimate-flow-online">
+
+                            <span></span>
+
+                            Online
+
+                        </div>
+
+                    </div>
+
+                    <div class="estimate-flow-divider"></div>
+
+                    <div class="estimate-timeline">
+
+                        <div class="estimate-timeline-item estimate-step-1">
+
+                            <div class="estimate-timeline-marker">
+
+                                <span>🏠</span>
+
+                            </div>
+
+                            <div class="estimate-timeline-content">
+
+                                <div class="estimate-timeline-top">
+
+                                    <span>Step 1</span>
+
+                                    <strong>Home Details</strong>
+
+                                </div>
+
+                                <p>
+                                    Bedrooms, bathrooms and property type.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="estimate-timeline-line estimate-line-1"></div>
+
+                        <div class="estimate-timeline-item estimate-step-2">
+
+                            <div class="estimate-timeline-marker">
+
+                                <span>✨</span>
+
+                            </div>
+
+                            <div class="estimate-timeline-content">
+
+                                <div class="estimate-timeline-top">
+
+                                    <span>Step 2</span>
+
+                                    <strong>Choose Your Service</strong>
+
+                                </div>
+
+                                <p>
+                                    Select the cleaning service you need.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="estimate-timeline-line estimate-line-2"></div>
+
+                        <div class="estimate-timeline-item estimate-step-3">
+
+                            <div class="estimate-timeline-marker">
+
+                                <span>＋</span>
+
+                            </div>
+
+                            <div class="estimate-timeline-content">
+
+                                <div class="estimate-timeline-top">
+
+                                    <span>Step 3</span>
+
+                                    <strong>Add Extras</strong>
+
+                                </div>
+
+                                <p>
+                                    Add optional services when needed.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="estimate-timeline-line estimate-line-3"></div>
+
+                        <div class="estimate-timeline-item estimate-step-result">
+
+                            <div class="estimate-timeline-marker estimate-result-marker">
+
+                                <span>⚡</span>
+
+                            </div>
+
+                            <div class="estimate-timeline-content estimate-result-content">
+
+                                <div>
+
+                                    <span class="estimate-result-label">
+                                        Your estimate
+                                    </span>
+
+                                    <strong>
+                                        Ready in under 60 seconds
+                                    </strong>
+
+                                </div>
+
+                                <div class="estimate-result-free">
+
+                                    FREE
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="estimate-flow-footer">
+
+                        <span>✓ No payment</span>
+
+                        <span>✓ No account</span>
+
+                        <span>✓ No phone call</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="estimate-highlights">
+
+                <div class="estimate-highlight">
+
+                    <span class="estimate-highlight-icon">
+                        ✓
+                    </span>
+
+                    <div>
+
+                        <strong>No commitment</strong>
+
+                        <span>
+                            Review your estimate before making any decision.
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="estimate-highlight">
+
+                    <span class="estimate-highlight-icon">
+                        ✓
+                    </span>
+
+                    <div>
+
+                        <strong>No payment required</strong>
+
+                        <span>
+                            Receiving your estimate is completely free.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <a href="https://www.smartimateapp.com/lm-estimate"
+               class="estimate-button"
+               data-track="estimate_click"
+               data-location="estimate_section">
+
+                <span class="estimate-button-icon">
+
+                    ⚡
+
+                </span>
+
+                <span>
+
+                    <strong>Get My Estimate</strong>
+
+                    <small>Free estimate — no payment required</small>
+
+                </span>
+
+                <span class="estimate-button-arrow">
+
+                    →
+
+                </span>
+
+            </a>
+
+            <p class="estimate-secure">
+
+                🔒 Secure online estimate. No account required.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+END SMART ESTIMATE
+========================================================== -->
 <!-- ==========================================================
 WHY CHOOSE US
 ========================================================== -->
@@ -1116,26 +1933,31 @@ WHY CHOOSE US
 
     <div class="container">
 
-        <span class="section-badge">
+        <!-- SECTION HEADER -->
 
-            ⭐ Why Choose Us
+        <div class="why-header">
 
-        </span>
+            <span class="why-badge">
+                ⭐ Why Choose Us
+            </span>
 
-        <h2>
+            <h2>
+                Trusted By Homeowners
 
-            Trusted By Homeowners
-            <span>Across Boston & MetroWest</span>
+                <span>
+                    Across Boston & MetroWest
+                </span>
+            </h2>
 
-        </h2>
+            <p class="why-description">
 
-        <p class="section-description">
+                We combine experienced professionals, transparent pricing,
+                and a simple online booking experience to make house cleaning
+                easier than ever.
 
-            We combine experienced professionals, transparent pricing,
-            and a simple online booking experience to make house cleaning
-            easier than ever.
+            </p>
 
-        </p>
+        </div>
 
         <div class="why-wrapper">
 
@@ -1144,7 +1966,7 @@ WHY CHOOSE US
             <div class="why-image">
 
                 <img src="assets/images/team-cleaning.png"
-                    alt="Professional Cleaning Team">
+                     alt="Professional cleaning team">
 
             </div>
 
@@ -1155,9 +1977,7 @@ WHY CHOOSE US
                 <div class="why-item">
 
                     <div class="why-icon">
-
                         ✓
-
                     </div>
 
                     <div>
@@ -1165,10 +1985,8 @@ WHY CHOOSE US
                         <h3>Licensed & Insured</h3>
 
                         <p>
-
                             Your home is protected with fully insured
                             professional cleaning services.
-
                         </p>
 
                     </div>
@@ -1178,9 +1996,7 @@ WHY CHOOSE US
                 <div class="why-item">
 
                     <div class="why-icon">
-
                         ✓
-
                     </div>
 
                     <div>
@@ -1188,10 +2004,8 @@ WHY CHOOSE US
                         <h3>Experienced Professionals</h3>
 
                         <p>
-
                             Friendly, trained and experienced cleaners
                             who care about every detail.
-
                         </p>
 
                     </div>
@@ -1201,9 +2015,7 @@ WHY CHOOSE US
                 <div class="why-item">
 
                     <div class="why-icon">
-
                         ✓
-
                     </div>
 
                     <div>
@@ -1211,10 +2023,8 @@ WHY CHOOSE US
                         <h3>Instant Online Estimate</h3>
 
                         <p>
-
-                            Get your personalized estimate and request
-                            your preferred cleaning date in minutes.
-
+                            Get your personalized estimate online in
+                            under 60 seconds.
                         </p>
 
                     </div>
@@ -1224,20 +2034,16 @@ WHY CHOOSE US
                 <div class="why-item">
 
                     <div class="why-icon">
-
                         ✓
-
                     </div>
 
                     <div>
 
-                        <h3>100% Satisfaction Guarantee</h3>
+                        <h3>Online Booking</h3>
 
                         <p>
-
-                            We aren't happy until you're completely
-                            satisfied with the results.
-
+                            Choose your preferred service, date and
+                            available time online.
                         </p>
 
                     </div>
@@ -1263,27 +2069,34 @@ SERVICE AREAS
 
     <div class="container">
 
-        <span class="section-badge">
+        <!-- SECTION HEADER -->
 
-            📍 Service Areas
+        <div class="service-area-header">
 
-        </span>
+            <span class="section-badge">
+                📍 Service Areas
+            </span>
 
-        <h2>
+            <h2>
+                Serving Homes
 
-            Serving Homes
-            <span>Across MetroWest & Central Massachusetts</span>
+                <span>
+                    Across MetroWest & Central Massachusetts
+                </span>
+            </h2>
 
-        </h2>
+            <p class="section-description">
 
-        <p class="section-description">
+                LM Home Cleaning proudly provides premium residential cleaning
+                services throughout MetroWest and nearby communities with
+                flexible scheduling, trusted professionals and instant online
+                estimates.
 
-            LM Home Cleaning proudly provides premium residential cleaning
-            services throughout MetroWest and nearby communities with
-            flexible scheduling, trusted professionals and instant online
-            estimates.
+            </p>
 
-        </p>
+        </div>
+
+        <!-- MAP + CITIES -->
 
         <div class="service-area-wrapper">
 
@@ -1292,7 +2105,7 @@ SERVICE AREAS
             <div class="service-map">
 
                 <img src="assets/images/service-area-map.png"
-                     alt="LM Home Cleaning Service Area">
+                     alt="LM Home Cleaning service area map">
 
             </div>
 
@@ -1301,9 +2114,7 @@ SERVICE AREAS
             <div class="service-content">
 
                 <h3>
-
                     Areas We Proudly Serve
-
                 </h3>
 
                 <div class="cities-grid">
@@ -1335,20 +2146,18 @@ SERVICE AREAS
                     <div class="city">✓ Newton</div>
                     <div class="city">✓ Marlborough</div>
 
-                     <div class="city">✓ Framingham</div>
+                    <div class="city">✓ Framingham</div>
                     <div class="city">✓ Westborough</div>
 
-                       <div class="city">✓ Northborough</div>
+                    <div class="city">✓ Northborough</div>
                     <div class="city">✓ Southborough</div>
 
                 </div>
 
                 <p class="service-note">
 
-                    Don't see your city?
-
-                    Contact us today. We proudly serve many nearby
-                    communities throughout MetroWest and Central
+                    Don't see your city? Contact us today. We proudly serve
+                    many nearby communities throughout MetroWest and Central
                     Massachusetts.
 
                 </p>
@@ -1357,25 +2166,15 @@ SERVICE AREAS
 
         </div>
 
+        <!-- FOOTER BENEFITS -->
+
         <div class="service-area-footer">
 
-            <div>
+            <div>⭐ Premium Residential Cleaning</div>
 
-                ⭐ Premium Residential Cleaning
+            <div>✓ Fully Insured</div>
 
-            </div>
-
-            <div>
-
-                ✓ Fully Insured
-
-            </div>
-
-            <div>
-
-                ✓ Satisfaction Guaranteed
-
-            </div>
+            <div>✓ Satisfaction Guaranteed</div>
 
         </div>
 
@@ -1385,7 +2184,8 @@ SERVICE AREAS
 
 <!-- ==========================================================
 END SERVICE AREAS
-========================================================== --><!-- ==========================================================
+========================================================== -->
+<!-- ==========================================================
 REVIEWS
 ========================================================== -->
 
@@ -1572,63 +2372,109 @@ REVIEWS
 <!-- ==========================================================
 END REVIEWS
 ========================================================== -->
-
 <!-- ==========================================================
 FINAL CTA
 ========================================================== -->
 
-<section id="cta" class="final-cta">
+<section class="final-cta">
 
     <div class="container">
 
-        <span class="section-badge">
+        <div class="final-cta-card">
 
-            ✨ Ready To Get Started?
+            <span class="final-cta-badge">
+                ✨ Ready To Get Started?
+            </span>
 
-        </span>
+            <h2>
+                Ready For A
 
-        <h2>
+                <span>
+                    Cleaner Home?
+                </span>
+            </h2>
 
-            Ready For A
-            <span>Cleaner Home?</span>
+            <p class="final-cta-description">
 
-        </h2>
+                Choose the best way to get started. Receive your
+                personalized cleaning estimate or schedule your
+                cleaning online in just a few minutes.
 
-        <p>
+            </p>
 
-            Get your personalized online estimate in under 60 seconds.
-            No phone calls. No pressure. Just a fast and transparent estimate.
+            <div class="final-cta-buttons">
 
-        </p>
+                <a href="https://www.smartimateapp.com/lm-estimate"
+                   class="final-cta-button final-cta-estimate"
+                   data-track="estimate_click"
+                   data-location="final_cta">
 
-      <a href="https://www.smartimateapp.com/lm-estimate"
-   class="cta-button"
-   data-track="estimate_click"
-   data-location="final_cta">
+                    <span class="final-cta-button-icon">
+                        ⚡
+                    </span>
 
-   Get My Estimate →
+                    <span class="final-cta-button-text">
 
-</a>
+                        <strong>
+                            Get My Estimate
+                        </strong>
 
-        <div class="cta-benefits">
+                        <small>
+                            Free personalized estimate
+                        </small>
 
-            <div>
+                    </span>
 
-                ✓ Instant Online Estimate
+                    <span class="final-cta-arrow">
+                        →
+                    </span>
+
+                </a>
+
+                <a href="https://www.smartimateapp.com/smart-booking/?company=lm-booking"
+                   class="final-cta-button final-cta-booking"
+                   data-track="booking_click"
+                   data-location="final_cta">
+
+                    <span class="final-cta-button-icon">
+                        📅
+                    </span>
+
+                    <span class="final-cta-button-text">
+
+                        <strong>
+                            Book Online
+                        </strong>
+
+                        <small>
+                            Choose an available date and time
+                        </small>
+
+                    </span>
+
+                    <span class="final-cta-arrow">
+                        →
+                    </span>
+
+                </a>
 
             </div>
 
-            <div>
+            <div class="final-cta-trust">
 
-                ✓ No Obligation
+                <span>✓ Free Online Estimate</span>
 
-            </div>
+                <span>✓ Online Booking</span>
 
-            <div>
-
-                ✓ Secure Booking Request
+                <span>✓ No Payment Required</span>
 
             </div>
+
+            <p class="final-cta-secure">
+
+                🔒 Secure online process. No account required.
+
+            </p>
 
         </div>
 
@@ -1637,7 +2483,7 @@ FINAL CTA
 </section>
 
 <!-- ==========================================================
-End FINAL CTA
+END FINAL CTA
 ========================================================== -->
 <!-- ==========================================================
 FOOTER
@@ -1663,55 +2509,54 @@ FOOTER
 
                 <p>
 
-                    Premium residential house cleaning with trusted professionals,
-                    flexible scheduling and instant online estimates.
+                    Premium residential cleaning with instant online estimates,
+                    online booking and trusted professionals serving MetroWest
+                    & Central Massachusetts.
 
                 </p>
 
                 <div class="footer-social">
 
-    <a href="https://www.facebook.com/profile.php?id=61592029013245"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="Facebook">
+                    <a href="https://www.facebook.com/profile.php?id=61592029013245"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Facebook">
 
-        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-facebook-f"></i>
 
-    </a>
+                    </a>
 
-    <a href="https://www.instagram.com/lmhomecleaning"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="Instagram">
+                    <a href="https://www.instagram.com/lmhomecleaning"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Instagram">
 
-        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-instagram"></i>
 
-    </a>
+                    </a>
 
-    <a href="https://g.page/r/SEU_GOOGLE_BUSINESS"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="Google Business Profile">
+                    <a href="https://g.page/r/SEU_GOOGLE_BUSINESS"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Google Business">
 
-        <i class="fas fa-map-marker-alt"></i>
+                        <i class="fas fa-map-marker-alt"></i>
 
-    </a>
+                    </a>
 
-</div>
+                </div>
 
             </div>
 
-            <!-- NAVIGATION -->
+            <!-- QUICK LINKS -->
 
             <div class="footer-column">
 
-                <h3>Navigation</h3>
+                <h3>Quick Links</h3>
 
                 <ul>
 
                     <li><a href="#hero">Home</a></li>
-
-                    <li><a href="#estimate">Estimate</a></li>
 
                     <li><a href="#services">Services</a></li>
 
@@ -1719,25 +2564,37 @@ FOOTER
 
                     <li><a href="#reviews">Reviews</a></li>
 
+                    <li><a href="#service-area">Service Areas</a></li>
+
                 </ul>
 
             </div>
 
-            <!-- SERVICES -->
+            <!-- ONLINE SERVICES -->
 
             <div class="footer-column">
 
-                <h3>Services</h3>
+                <h3>Get Started</h3>
 
                 <ul>
+
+                    <li>
+                        <a href="https://www.smartimateapp.com/lm-estimate">
+                            Instant Estimate
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.smartimateapp.com/smart-booking/?company=lm-booking">
+                            Book Online
+                        </a>
+                    </li>
 
                     <li>Regular Cleaning</li>
 
                     <li>Deep Cleaning</li>
 
                     <li>Move In / Move Out</li>
-
-                    <li>Post Construction</li>
 
                 </ul>
 
@@ -1755,7 +2612,7 @@ FOOTER
 
                     <li>cleaninglmhome@gmail.com</li>
 
-                    <li>Massachusetts, USA</li>
+                    <li>MetroWest & Central Massachusetts</li>
 
                 </ul>
 
@@ -1774,11 +2631,21 @@ FOOTER
             <div class="footer-links">
 
                 <a href="privacy-policy.html">
+
                     Privacy Policy
+
                 </a>
 
                 <a href="terms-of-service.html">
+
                     Terms of Service
+
+                </a>
+
+                <a href="disclaimer.html">
+
+                    Disclaimer
+
                 </a>
 
             </div>
@@ -1792,7 +2659,6 @@ FOOTER
 <!-- ==========================================================
 END FOOTER
 ========================================================== -->
-
 </body>
 
 </html>

@@ -1,368 +1,471 @@
 /* ==========================================================
-   SERVICE AREAS
+SERVICE AREAS
 ========================================================== */
 
 .service-area{
+    position:relative;
 
-    padding:120px 0;
-
-    background:#FFFFFF;
-
-}
-
-.service-area h2{
-
-    text-align:center;
-
-    font-size:48px;
-
-    font-weight:800;
-
-    line-height:1.1;
-
-    color:#0F172A;
-
-    margin:20px 0;
-
-}
-
-.service-area h2 span{
-
-    display:block;
-
-    color:#C62828;
-
-}
-
-.service-area .section-description{
-
-    max-width:760px;
-
-    margin:0 auto 90px;
-
-    text-align:center;
-
-    font-size:20px;
-
-    line-height:1.7;
-
-    color:#64748B;
-
-}
-
-
-/* ==========================================================
-   LAYOUT
-========================================================== */
-
-.service-area-wrapper{
-
-    display:grid;
-
-    grid-template-columns:1.05fr .95fr;
-
-    gap:70px;
-
-    align-items:center;
-
-}
-
-
-/* ==========================================================
-   MAP
-========================================================== */
-
-.service-map{
+    padding:110px 0;
 
     overflow:hidden;
 
-    border-radius:28px;
+    background:
+        radial-gradient(
+            circle at 88% 12%,
+            rgba(198,40,40,.05),
+            transparent 30%
+        ),
+        #FFFFFF;
 
-    background:#fff;
-  max-width:520px;
-
-    margin:auto;
-    box-shadow:0 25px 60px rgba(15,23,42,.08);
-
+    text-align:center;
 }
 
-.service-map img{
+.service-area .container{
+    width:min(1200px, calc(100% - 40px));
 
-    width:100%;
+    margin:0 auto;
+}
 
+/* ==========================================================
+SECTION HEADER
+========================================================== */
+
+.service-area-header{
+    max-width:800px;
+
+    margin:0 auto 65px;
+
+    text-align:center;
+}
+
+.section-badge{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    margin:0 auto 20px;
+    padding:9px 16px;
+
+    border:1px solid rgba(198,40,40,.15);
+    border-radius:999px;
+
+    background:#FFF5F5;
+    color:#C62828;
+
+    font-size:13px;
+    font-weight:700;
+}
+
+.service-area h2{
+    margin:0;
+
+    color:#172033;
+
+    font-size:52px;
+    line-height:1.08;
+    font-weight:800;
+    letter-spacing:-.035em;
+
+    text-align:center;
+}
+
+.service-area h2 span{
     display:block;
 
-    transition:.45s;
+    margin-top:8px;
 
+    color:#C62828;
+}
+
+.service-area .section-description{
+    max-width:740px;
+
+    margin:27px auto 0;
+
+    color:#5F6368;
+
+    font-size:19px;
+    line-height:1.75;
+
+    text-align:center;
+}
+
+/* ==========================================================
+LAYOUT
+========================================================== */
+
+.service-area-wrapper{
+    display:grid;
+    grid-template-columns:minmax(0,1.12fr) minmax(420px,.88fr);
+
+    gap:38px;
+
+    align-items:center;   /* <-- era start */
+}
+
+/* ==========================================================
+MAP
+========================================================== */
+.service-map{
+    background:none;
+    border:none;
+    box-shadow:none;
+    padding:0;
+}
+
+  
+.service-map img{
+    width:100%;
+    display:block;
+   
+     transition:transform .45s ease;
 }
 
 .service-map:hover img{
-
-    transform:scale(1.03);
-
+    transform:scale(1.015);
 }
 
-
 /* ==========================================================
-   CONTENT
+CONTENT CARD
 ========================================================== */
 
-.service-content h3{
+.service-area .service-content{
+    width:100%;
 
-    font-size:32px;
+    display:flex;
+    flex-direction:column;
 
-    font-weight:800;
+    padding:30px;
 
-    color:#0F172A;
+    border:1px solid rgba(15,23,42,.08);
+    border-radius:26px;
 
-    margin-bottom:35px;
+    background:#FFFFFF;
 
+    text-align:left;
+
+    box-shadow:
+        0 20px 50px rgba(15,23,42,.07),
+        0 6px 16px rgba(15,23,42,.03);
 }
 
+.service-area .service-content h3{
+    margin:0 0 28px;
+
+    color:#172033;
+
+    font-size:30px;
+    line-height:1.2;
+    font-weight:800;
+
+    text-align:left;
+}
 
 /* ==========================================================
-   CITIES
+CITIES
 ========================================================== */
 
 .cities-grid{
-
     display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
 
-    grid-template-columns:1fr 1fr;
+    gap:0 24px;
 
-    gap:18px 35px;
+    width:100%;
 
-    margin-bottom:40px;
-
+    margin-bottom:28px;
 }
 
 .city{
-
     display:flex;
-
     align-items:center;
+    justify-content:flex-start;
 
-    gap:12px;
+    min-width:0;
+    min-height:47px;
 
-    font-size:18px;
-
-    font-weight:600;
-
-    color:#334155;
-
-    padding-bottom:14px;
+    padding:10px 0;
 
     border-bottom:1px solid #EEF2F7;
 
-    transition:.30s;
+    color:#334155;
 
+    font-size:15px;
+    line-height:1.3;
+    font-weight:650;
+
+    text-align:left;
+
+    transition:
+        color .25s ease,
+        padding-left .25s ease;
 }
 
 .city:hover{
+    padding-left:5px;
 
-    color: #C62828;
-
-    padding-left:8px;
-
+    color:#C62828;
 }
 
-
 /* ==========================================================
-   NOTE
+NOTE
 ========================================================== */
 
 .service-note{
+    margin:0;
+    padding:18px;
 
-    font-size:17px;
+    border:1px solid rgba(198,40,40,.13);
+    border-radius:14px;
 
-    line-height:1.7;
+    background:#FFF8F8;
 
     color:#64748B;
 
+    font-size:14px;
+    line-height:1.65;
+
+    text-align:center;
 }
 
-
 /* ==========================================================
-   FOOTER
+FOOTER
 ========================================================== */
 
 .service-area-footer{
-
     display:flex;
-
+    align-items:center;
     justify-content:center;
+    flex-wrap:wrap;
 
-    gap:50px;
+    gap:20px 45px;
 
-    margin-top:90px;
-
-    padding-top:35px;
+    margin-top:55px;
+    padding-top:30px;
 
     border-top:1px solid #E5E7EB;
-
 }
 
 .service-area-footer div{
-
-    font-size:16px;
-
-    font-weight:600;
-
     color:#334155;
 
+    font-size:15px;
+    font-weight:600;
 }
 
-
 /* ==========================================================
-   TABLET
+TABLET
 ========================================================== */
 
 @media(max-width:991px){
 
-.service-area{
+    .service-area{
+        padding:80px 0;
+    }
 
-    padding:80px 0;
+    .service-area .container{
+        width:min(100% - 32px, 780px);
+    }
 
-}
+    .service-area-header{
+        margin-bottom:50px;
+    }
 
-.service-area h2{
+    .service-area h2{
+        font-size:42px;
+    }
 
-    font-size:38px;
+    .service-area .section-description{
+        font-size:18px;
+    }
 
-}
+    .service-area-wrapper{
+        display:flex;
+        flex-direction:column;
 
-.service-area .section-description{
+        gap:34px;
+    }
 
-    font-size:18px;
+    .service-map{
+        order:1;
 
-    margin-bottom:60px;
+        width:100%;
+    }
 
-}
+    .service-content{
+        order:2;
+    }
 
-.service-area-wrapper{
-
-    grid-template-columns:1fr;
-
-    gap:50px;
-
-}
-
-.service-map{
-
-    order:2;
-
-}
-
-.service-content{
-
-    order:1;
-
-}
-
-.service-content h3{
-
-    text-align:center;
-
-    font-size:28px;
+    .service-area .service-content h3{
+        text-align:center;
+    }
 
 }
-
-.cities-grid{
-
-    gap:15px 25px;
-
-}
-
-.service-area-footer{
-
-    flex-direction:column;
-
-    align-items:center;
-
-    gap:18px;
-
-    margin-top:60px;
-
-}
-
-}
-
 
 /* ==========================================================
-   MOBILE
+MOBILE
 ========================================================== */
 
 @media(max-width:600px){
 
-.service-area{
+    .service-area{
+        padding:58px 0;
+    }
 
-    padding:60px 0;
+    .service-area .container{
+        width:calc(100% - 28px);
+    }
+
+    .service-area-header{
+        margin-bottom:34px;
+    }
+
+    .section-badge{
+        margin-bottom:17px;
+        padding:8px 13px;
+
+        font-size:11px;
+    }
+
+    .service-area h2{
+        font-size:32px;
+        line-height:1.12;
+    }
+
+    .service-area h2 span{
+        margin-top:7px;
+    }
+
+    .service-area .section-description{
+        margin-top:20px;
+
+        font-size:15px;
+        line-height:1.65;
+    }
+
+    .service-area-wrapper{
+        display:flex;
+        flex-direction:column;
+
+        gap:28px;
+    }
+
+    /* Mapa vem antes das cidades */
+
+    .service-map{
+        order:1;
+
+        width:100%;
+
+        border-radius:20px;
+    }
+
+    .service-map img{
+        width:100%;
+        height:auto;
+
+        object-fit:contain;
+    }
+
+    .service-area .service-content{
+        order:2;
+
+        width:100%;
+
+        padding:20px;
+
+        border-radius:20px;
+
+        text-align:left;
+    }
+
+    .service-area .service-content h3{
+        margin-bottom:20px;
+
+        font-size:24px;
+
+        text-align:center;
+    }
+
+    .cities-grid{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+
+        gap:0 16px;
+
+        width:100%;
+
+        margin-bottom:22px;
+    }
+
+    .city{
+        justify-content:flex-start;
+
+        min-width:0;
+        min-height:42px;
+
+        padding:8px 0;
+
+        font-size:13px;
+        line-height:1.25;
+
+        text-align:left;
+    }
+
+    .service-note{
+        padding:15px;
+
+        font-size:13px;
+        line-height:1.6;
+    }
+
+    .service-area-footer{
+        flex-direction:column;
+
+        gap:15px;
+
+        margin-top:42px;
+        padding-top:24px;
+    }
+
+    .service-area-footer div{
+        font-size:14px;
+    }
 
 }
 
-.service-area h2{
+/* ==========================================================
+VERY SMALL MOBILE
+========================================================== */
 
-    font-size:30px;
+@media(max-width:380px){
 
-}
+    .service-area .container{
+        width:calc(100% - 22px);
+    }
 
-.service-area .section-description{
+    .service-area h2{
+        font-size:29px;
+    }
 
-    font-size:16px;
+    .cities-grid{
+        gap:0 12px;
+    }
 
-    margin-bottom:45px;
-
-}
-
-.service-content h3{
-
-    font-size:22px;
-    margin-bottom:22px;
-
-}
-
-.cities-grid{
-
-    grid-template-columns:1fr 1fr;
-
-    gap:12px 20px;
+    .city{
+        font-size:12px;
+    }
 
 }
 
-.city{
+/* ==========================================================
+REDUCED MOTION
+========================================================== */
 
-    font-size:15px;
+@media(prefers-reduced-motion:reduce){
 
-    padding-bottom:10px;
-
-}
-
-
-.service-note{
-
-    text-align:center;
-
-    font-size:15px;
-
-}
-
-.service-area-footer{
-
-    margin-top:45px;
-
-    padding-top:25px;
-
-}
-
-.service-area-footer div{
-
-    font-size:15px;
-
-}
-.city{
-
-    gap:8px;
-
-}
+    .service-map img,
+    .city{
+        transition:none;
+    }
 
 }
