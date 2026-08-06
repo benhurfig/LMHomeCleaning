@@ -435,3 +435,78 @@ document.querySelectorAll("[data-track]").forEach(function(button) {
     });
 
 });
+
+/* ==========================================================
+TEXT US — FLOATING SMS BUTTON
+========================================================== */
+
+function createTextUsButton() {
+
+    if (
+        typeof CONFIG === "undefined" ||
+        !CONFIG.textMessage?.enabled ||
+        !CONFIG.phone
+    ) {
+        return;
+    }
+
+    const phone = CONFIG.phone.replace(/\D/g, "");
+
+    if (!phone) {
+        return;
+    }
+
+    const smsPhone = phone.startsWith("1")
+        ? `+${phone}`
+        : `+1${phone}`;
+
+    const label =
+        CONFIG.textMessage.label || "Text Us";
+
+    const message =
+        CONFIG.textMessage.message || "";
+
+    const textButton = document.createElement("a");
+
+    textButton.className = "text-us-button";
+    textButton.href =
+        `sms:${smsPhone}?body=${encodeURIComponent(message)}`;
+
+    textButton.setAttribute(
+        "aria-label",
+        `${label} at ${CONFIG.phone}`
+    );
+
+    textButton.style.setProperty(
+        "--text-us-color",
+        CONFIG.color || "#C62828"
+    );
+
+    textButton.innerHTML = `
+        <span class="text-us-icon" aria-hidden="true">
+            <i class="fa-solid fa-comment-dots"></i>
+        </span>
+
+        <span class="text-us-label">${label}</span>
+    `;
+
+    textButton.addEventListener("click", function() {
+
+        if (typeof trackEvent === "function") {
+
+            trackEvent(
+                "text_us_click",
+                {
+                    location: "floating_button"
+                }
+            );
+
+        }
+
+    });
+
+    document.body.appendChild(textButton);
+
+}
+
+createTextUsButton();

@@ -7,7 +7,7 @@ const CONFIG = {
 
     phone: "(508) 397-0149",
 
-    email: "leilammelo77@gmail.com",
+    email: "cleaninglmhome@gmail.com",
 
     website: "https://lmhomecleaning.com",
 
@@ -21,6 +21,16 @@ const CONFIG = {
 
     ga4:"G-VGS11ZW6WD",
 
-    googleAds:""
+    googleAds:"",
+
+    textMessage: {
+
+        enabled: true,
+
+        label: "Text Us",
+
+        message: "Hi! I found LM Home Cleaning online and would like to request a cleaning quote."
+
+    }
 
 };
