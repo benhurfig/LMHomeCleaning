@@ -125,3 +125,64 @@ TEXT US — FLOATING SMS BUTTON
         transition: none;
     }
 }
+
+/* ==========================================================
+GOOGLE REVIEWS — VERIFICATION LINK
+========================================================== */
+
+.reviews-google-action {
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+    margin-top: 22px;
+    text-align: center;
+}
+
+.reviews-google-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 50px;
+    padding: 12px 22px;
+    color: #ffffff;
+    background: #b32626;
+    border: 1px solid #b32626;
+    border-radius: 999px;
+    box-shadow: 0 9px 24px rgba(179, 38, 38, 0.18);
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.reviews-google-button:hover,
+.reviews-google-button:focus-visible {
+    color: #ffffff;
+    background: #8f1f1f;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(143, 31, 31, 0.24);
+}
+
+.reviews-google-button:focus-visible {
+    outline: 3px solid rgba(179, 38, 38, 0.25);
+    outline-offset: 3px;
+}
+
+.reviews-google-action p {
+    margin: 0;
+    color: #666666;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .reviews-google-button {
+        width: 100%;
+        max-width: 330px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reviews-google-button {
+        transition: none;
+    }
+}
