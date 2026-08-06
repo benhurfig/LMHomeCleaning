@@ -1,0 +1,23 @@
+{
+  "name": "LM Home Cleaning",
+  "short_name": "LM Cleaning",
+  "description": "Professional house cleaning services in MetroWest and Central Massachusetts.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#C62828",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/logo.png",
+      "sizes": "1254x1254",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
