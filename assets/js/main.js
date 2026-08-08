@@ -495,7 +495,7 @@ function createTextUsButton() {
         if (typeof trackEvent === "function") {
 
             trackEvent(
-                "text_us_click",
+                "sms_click",
                 {
                     location: "floating_button"
                 }
